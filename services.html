@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Services • TechNova System LLC</title>
+  <meta name="description" content="Services, work, pricing, and contact for TechNova System LLC." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <div class="brand">
+      <img src="images/logo.png" alt="TechNova Logo" class="logo-img">
+      <span class="brand-name">TechNova System LLC <small>Web • Dashboards • Automation</small></span>
+    </div>
+    <nav class="links">
+      <a href="services.html#services">Services</a>
+      <a href="#work">Work</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
+      <a href="index.html">Home</a>
+    </nav>
+    <div class="actions">
+      <a class="btn" href="#pricing">See Packages</a>
+      <button class="hamburger" aria-label="Menu" id="menuBtn">☰</button>
+    </div>
+  </div>
+  <div class="container mobile" id="mobileMenu">
+    <a href="#services">Services</a>
+    <a href="#work">Work</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#contact">Contact</a>
+    <a href="index.html">Home</a>
+  </div>
+</header>
+
+<main>
+  <!-- Services -->
+  <section id="services" class="container">
+    <h2>What We Offer</h2>
+    <div class="grid cols-2">
+      <div class="card">
+        <h3>🌐 Web Design</h3>
+        <p>Fast, mobile-friendly websites with clear CTAs, contact forms, and SEO basics.</p>
+      </div>
+      <div class="card">
+        <h3>📱 App Design</h3>
+        <p>Polished app prototypes to validate ideas and impress investors or users.</p>
+      </div>
+      <div class="card">
+        <h3>🛠 Tech Support</h3>
+        <p>Remote helpdesk for email setup, computer issues, and software troubleshooting.</p>
+      </div>
+      <div class="card">
+        <h3>📊 Data Analysis</h3>
+        <p>Excel / Power BI dashboards and data cleanup so you can make decisions faster.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work -->
+  <section id="work" class="container">
+    <h2>Selected work</h2>
+    <p class="muted">Replace placeholders with real screenshots.</p>
+    <div class="grid cols-3 spaced">
+      <img class="img" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop" alt="Project 1">
+      <img class="img" src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop" alt="Project 2">
+      <img class="img" src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?q=80&w=1200&auto=format&fit=crop" alt="Project 3">
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="container">
+    <h2>Simple, transparent pricing</h2>
+    <p class="muted">50% upfront • Clear scope • 2 light revision rounds</p>
+    <div class="grid cols-3 spaced">
+      <div class="card">
+        <div class="price">$600</div>
+        <strong>Starter</strong>
+        <ul class="list">
+          <li>1-page landing + contact form</li>
+          <li>Mobile-ready + speed pass</li>
+          <li>2 minor revisions</li>
+        </ul>
+        <a class="btn primary" href="#contact" style="margin-top:8px">Start</a>
+      </div>
+      <div class="card" style="border-color:var(--accent)">
+        <div class="price">$1,200</div>
+        <strong>Business</strong>
+        <ul class="list">
+          <li>Up to 5 pages (AR/EN)</li>
+          <li>SEO basics + Google Business</li>
+          <li>Handoff video</li>
+        </ul>
+        <a class="btn primary" href="#contact" style="margin-top:8px">Choose</a>
+      </div>
+      <div class="card">
+        <div class="price">$1,800</div>
+        <strong>Pro</strong>
+        <ul class="list">
+          <li>Up to 8 pages + blog</li>
+          <li>Analytics + content outline</li>
+          <li>Training & support</li>
+        </ul>
+        <a class="btn primary" href="#contact" style="margin-top:8px">Get proposal</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="container">
+    <h2>Contact</h2>
+    <p class="muted">Fill the form and we’ll reply within business hours. You can also WhatsApp or call.</p>
+    <div class="grid cols-2 spaced" style="align-items:start">
+      <div class="card">
+        <form id="contactForm" class="stack" action="https://formspree.io/f/xgvlowop" method="POST">
+          <input class="input" name="name" placeholder="Full name" required />
+          <input class="input" name="_replyto" type="email" placeholder="Email" required />
+          <input class="input" name="phone" placeholder="Phone (optional)" />
+          <textarea class="input" name="message" rows="5" placeholder="Tell me about your project" required></textarea>
+          <input type="hidden" name="_subject" value="New message from TechNova System LLC">
+          <input type="hidden" name="_format" value="json">
+          <button class="btn primary" type="submit">Send message</button>
+          <p id="formStatus" class="muted" aria-live="polite"></p>
+        </form>
+      </div>
+      <div class="card">
+        <strong>Business</strong>
+        <p class="muted">
+          TechNova System LLC<br>
+          Email: <a href="mailto:Ruaaaltameemi@gmail.com">Ruaaaltameemi@gmail.com</a><br>
+          Phone: <a href="tel:+19165861411">+1 (916) 586-1411</a><br>
+          Location: Fairfax, Virginia (Available worldwide)
+        </p>
+        <strong>Social</strong>
+        <p class="muted">GitHub: <a href="https://github.com/ruaaaltameemi4" target="_blank" rel="noreferrer">ruaaaltameemi4</a></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer-gradient">
+  <div class="container footer-wrap">
+    <img src="images/logo.png" alt="TechNova Logo" class="footer-logo">
+    <div class="footer-text">© <span id="year"></span> <strong>TechNova System LLC</strong> • <a href="#" class="footer-link">Privacy</a></div>
+  </div>
+</footer>
+
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click',()=> mobileMenu.classList.toggle('open'));
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  async function sendWithFormspree(formEl, statusEl) {
+    statusEl.textContent = 'Sending...';
+    try {
+      const res = await fetch(formEl.action, { method:'POST', body:new FormData(formEl), headers:{Accept:'application/json'} });
+      if (res.ok){ formEl.reset(); statusEl.textContent = 'Thanks! Your message was sent.'; }
+      else { const t = await res.text(); statusEl.textContent = 'Error: ' + t.slice(0,180); }
+    } catch { statusEl.textContent = 'Network error. Please try again.'; }
+  }
+  const contactForm = document.getElementById('contactForm');
+  const formStatus = document.getElementById('formStatus');
+  contactForm.addEventListener('submit', e => { e.preventDefault(); sendWithFormspree(contactForm, formStatus); });
+</script>
+</body>
+</html>

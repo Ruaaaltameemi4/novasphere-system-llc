@@ -1,0 +1,76 @@
+:root{
+  --ink:#0f172a; --muted:#475569; --bg:#ffffff; --line:#e2e8f0; --accent:#2563eb;
+  --max:1100px; --pad:clamp(16px,3vw,28px); --radius:16px; --shadow:0 8px 24px rgba(15,23,42,.08);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  background:
+    radial-gradient(1200px 600px at 80% -10%, #e6f0ff 0%, transparent 60%),
+    radial-gradient(700px 400px at -10% 20%, #f0f9ff 0%, transparent 55%),
+    var(--bg);
+  color:var(--ink);line-height:1.6
+}
+a{color:inherit;text-decoration:none}
+a:hover{opacity:.9}
+.container{max-width:var(--max);margin:auto;padding:0 var(--pad)}
+section{padding:64px 0}
+h1{font-size:clamp(32px,5vw,46px);line-height:1.15;margin:10px 0 6px}
+h2{font-size:clamp(22px,3.2vw,32px);margin:0 0 12px}
+h3{margin:0 0 8px}
+.lead{color:var(--muted);font-size:clamp(16px,2.2vw,20px)}
+.muted{color:var(--muted)}
+.badge{display:inline-block;background:#eff6ff;border:1px solid #dbeafe;padding:6px 12px;border-radius:999px;font-size:14px;color:#1d4ed8}
+
+/* Header / Nav */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.8);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 0}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.2px}
+.logo-img{width:36px;height:36px;object-fit:contain;border-radius:10px;background:#f1f5f9;border:1px solid var(--line)}
+.brand-name{display:flex;flex-direction:column;line-height:1}
+.brand-name small{color:var(--muted);font-weight:600;font-size:12px}
+.links{display:none;gap:18px}
+.links a{padding:8px 10px;border-radius:10px}
+.links a:hover{background:#f8fafc}
+.actions{display:flex;gap:10px;align-items:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border:1px solid var(--ink);border-radius:12px;transition:transform .08s ease, box-shadow .2s ease, background .2s ease}
+.btn:active{transform:translateY(1px)}
+.btn.primary{background:var(--ink);color:#fff;border-color:transparent;box-shadow:var(--shadow)}
+.btn.primary:hover{background:#0b1222}
+.btn.ghost{background:#fff}
+.hamburger{font-size:22px;background:none;border:0;display:inline-flex}
+@media(min-width:860px){.links{display:flex}.hamburger{display:none}}
+
+/* Layout / Cards */
+.hero{display:grid;gap:22px;align-items:center;padding:48px 0}
+@media(min-width:860px){.hero{grid-template-columns:1.05fr .95fr;min-height:66vh}}
+.grid{display:grid;gap:16px}
+@media(min-width:860px){.cols-2{grid-template-columns:repeat(2,1fr)}.cols-3{grid-template-columns:repeat(3,1fr)}}
+.card{border:1px solid var(--line);border-radius:var(--radius);padding:18px;background:#fff;box-shadow:var(--shadow)}
+.card:hover{transform:translateY(-2px);transition:transform .18s ease}
+.img{width:100%;height:240px;object-fit:cover;background:#f1f5f9;border-radius:var(--radius);border:1px solid var(--line);box-shadow:var(--shadow)}
+
+/* Forms */
+.input{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:#fff;outline:none;transition:border-color .15s ease, box-shadow .15s ease}
+.input:focus{border-color:#bfdbfe;box-shadow:0 0 0 4px #eff6ff}
+.stack{display:flex;flex-direction:column;gap:10px}
+
+/* Lists & prices */
+.price{font-weight:800;font-size:24px}
+.list{list-style:none;margin:8px 0 0;padding:0}
+.list li{padding:6px 0;display:flex;gap:8px}
+.list li::before{content:"✓";font-weight:800;color:#16a34a;line-height:1.2}
+
+/* Footer with blue-purple gradient */
+.footer-gradient{border-top:1px solid var(--line);padding:0;background:linear-gradient(135deg,#2563eb,#7c3aed);color:white}
+.footer-wrap{display:flex;flex-direction:column;align-items:center;gap:12px;padding:28px 0}
+.footer-logo{width:70px;height:70px;object-fit:contain;border-radius:14px;background:white;padding:6px;box-shadow:0 4px 12px rgba(0,0,0,.2)}
+.footer-text{font-size:14px;line-height:1.6;text-align:center}
+.footer-link{color:#c7d2fe;text-decoration:underline}
+
+/* Mobile menu */
+.mobile{display:none;flex-direction:column;gap:10px;padding:10px 0}
+.mobile.open{display:flex}
+.center{text-align:center}
+.spaced{margin-top:14px}

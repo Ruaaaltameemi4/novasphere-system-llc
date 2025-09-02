@@ -3,339 +3,107 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TechNova System LLC | Web Design • Dashboards • Python Automation</title>
-  <meta name="description" content="TechNova System LLC builds fast, mobile-friendly websites, dashboards, and Python automations for small businesses. Book a free call." />
-  <meta name="theme-color" content="#111827" />
+  <title>TechNova System LLC — Web • Dashboards • Automation</title>
+  <meta name="description" content="Fast, mobile-friendly websites and dashboards for small businesses." />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
-  <style>
-    :root{
-      --ink:#0f172a; --muted:#475569; --bg:#ffffff; --line:#e2e8f0; --accent:#2563eb;
-      --max:1100px; --pad:clamp(16px,3vw,28px); --radius:16px;
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0}
-    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
-    a{color:inherit}
-    .container{max-width:var(--max);margin:auto;padding:0 var(--pad)}
-    header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.9);backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid var(--line)}
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 0}
-    .logo{font-weight:800}
-    .links{display:none;gap:18px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border:1px solid var(--ink);border-radius:12px;text-decoration:none}
-    .btn.primary{background:var(--ink);color:#fff}
-    .btn.ghost{background:#fff}
-    .hamburger{font-size:22px;background:none;border:0;display:inline-flex}
-    @media(min-width:860px){.links{display:flex}.hamburger{display:none}}
-    section{padding:56px 0}
-    h1{font-size:clamp(28px,5vw,42px);line-height:1.15;margin:10px 0}
-    h2{font-size:clamp(22px,3.2vw,32px);margin:0 0 10px}
-    .lead{color:var(--muted);font-size:clamp(16px,2.2vw,20px)}
-    .muted{color:var(--muted)}
-    .badge{display:inline-block;background:#f1f5f9;border:1px solid var(--line);padding:6px 12px;border-radius:999px;font-size:14px}
-    .card{border:1px solid var(--line);border-radius:var(--radius);padding:16px;background:#fff}
-    .hero{display:grid;gap:20px;align-items:center;padding:48px 0}
-    @media(min-width:860px){.hero{grid-template-columns:1.1fr .9fr;min-height:66vh}}
-    .grid{display:grid;gap:16px}
-    @media(min-width:860px){.cols-2{grid-template-columns:repeat(2,1fr)}.cols-3{grid-template-columns:repeat(3,1fr)}}
-    .img{width:100%;height:240px;object-fit:cover;background:#f1f5f9;border-radius:var(--radius)}
-    .input{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:12px}
-    .stack{display:flex;flex-direction:column;gap:10px}
-    .price{font-weight:800;font-size:22px}
-    .list{list-style:none;margin:8px 0 0;padding:0}
-    .list li{padding:6px 0}
-    footer{border-top:1px solid var(--line);padding:20px 0;color:var(--muted);font-size:14px}
-    .mobile{display:none;flex-direction:column;gap:10px;padding:10px 0}
-    .mobile.open{display:flex}
-  </style>
-
-  <!-- JSON-LD for Local Business (edit phone/urls) -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"LocalBusiness",
-    "name":"TechNova System LLC",
-    "url":"https://ruaaaltameemi4.github.io/portfolio/",
-    "telephone":"+1-916-586-1411",
-    "areaServed":"Fairfax VA",
-    "address":{"@type":"PostalAddress","addressLocality":"Fairfax","addressRegion":"VA","addressCountry":"US"},
-    "sameAs":["https://github.com/ruaaaltameemi4"]
-  }
-  </script>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Header / Nav -->
-  <header>
-    <div class="container nav">
-      <div class="logo">TechNova System LLC</div>
-      <nav class="links">
-        <a href="#about">About</a>
-        <a href="#work">Work</a>
-        <a href="#technova">Business</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <div class="actions">
-        <a class="btn" href="#pricing">See Packages</a>
-        <button class="hamburger" aria-label="Menu" id="menuBtn">☰</button>
-      </div>
+<header>
+  <div class="container nav">
+    <div class="brand">
+      <img src="images/logo.png" alt="TechNova Logo" class="logo-img">
+      <span class="brand-name">TechNova System LLC <small>Web • Dashboards • Automation</small></span>
     </div>
-    <div class="container mobile" id="mobileMenu">
-      <a href="#about">About</a>
-      <a href="#work">Work</a>
-      <a href="#technova">Business</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#contact">Contact</a>
+    <nav class="links">
+      <a href="services.html">Services</a>
+      <a href="services.html#work">Work</a>
+      <a href="services.html#pricing">Pricing</a>
+      <a href="services.html#contact">Contact</a>
+    </nav>
+    <div class="actions">
+      <a class="btn" href="services.html#pricing">See Packages</a>
+      <button class="hamburger" aria-label="Menu" id="menuBtn">☰</button>
     </div>
-  </header>
+  </div>
+  <div class="container mobile" id="mobileMenu">
+    <a href="services.html">Services</a>
+    <a href="services.html#work">Work</a>
+    <a href="services.html#pricing">Pricing</a>
+    <a href="services.html#contact">Contact</a>
+  </div>
+</header>
 
-  <main>
-    <!-- Hero -->
-    <section class="container hero" id="about">
-      <div>
-        <span class="badge">Web Design • Dashboards • Python Automation</span>
-        <h1>Websites that turn visitors into customers</h1>
-        <p class="lead">We build fast, mobile-friendly sites with clear calls-to-action so small businesses get more inquiries and sales.</p>
-        <div class="stack" style="margin-top:14px;max-width:580px">
-          <a class="btn primary" href="#contact">Book a free 15-min call →</a>
-          <a class="btn ghost" href="#pricing">View pricing</a>
-        </div>
-        <p class="muted" style="margin-top:12px">Fast 5–7 day delivery • Bilingual (AR/EN) available • Fixed prices</p>
+<main>
+  <!-- Hero -->
+  <section class="container hero">
+    <div>
+      <span class="badge">Web Design • Dashboards • Python Automation</span>
+      <h1>Websites that turn visitors into customers</h1>
+      <p class="lead">We build fast, mobile-friendly sites with clear calls-to-action so small businesses get more inquiries and sales.</p>
+      <div class="stack spaced" style="max-width:580px">
+        <a class="btn primary" href="services.html#contact">Book a free 15-min call →</a>
+        <a class="btn ghost" href="services.html#pricing">View pricing</a>
       </div>
+      <p class="muted spaced">Fast 5–7 day delivery • Bilingual (AR/EN) • Fixed prices</p>
+    </div>
 
-      <div class="card">
-        <h3 style="margin-top:0">Quick Project Brief</h3>
-        <!-- WIRED TO FORMSPREE -->
-        <form id="briefForm" class="stack" action="https://formspree.io/f/xgvlowop" method="POST">
-          <input class="input" name="name" placeholder="Your name" required />
-          <input class="input" name="_replyto" type="email" placeholder="Email address" required />
-          <input class="input" name="business" placeholder="Business / Website (optional)" />
-          <textarea class="input" name="needs" rows="4" placeholder="What do you need? (Website, Dashboard, Automation)" required></textarea>
-
-          <!-- Helpful hidden fields -->
-          <input type="hidden" name="_subject" value="Quick Project Brief — TechNova System LLC">
-          <input type="hidden" name="_format" value="json">
-
-          <button class="btn primary" type="submit">Send & Book</button>
-          <p id="briefStatus" class="muted" aria-live="polite"></p>
-        </form>
-      </div>
-    </section>
-
-    <!-- TechNova Business Section -->
-    <section id="technova" class="container">
-      <h2>TechNova System LLC</h2>
-      <p class="muted">We build fast, mobile-friendly websites, business dashboards, and simple automations so small businesses can grow—without tech headaches.</p>
-
-      <div class="grid cols-3" style="margin-top:14px">
-        <div class="card">
-          <h3 style="margin:6px 0">Website Design</h3>
-          <p class="muted">1–5 page sites (AR/EN), contact forms, SEO basics.</p>
-        </div>
-        <div class="card">
-          <h3 style="margin:6px 0">Data Dashboards</h3>
-          <p class="muted">Excel / Power BI dashboards + clean data handoff.</p>
-        </div>
-        <div class="card">
-          <h3 style="margin:6px 0">Python Automation</h3>
-          <p class="muted">Weekly reports and ETL scripts to save hours.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Work / Portfolio -->
-    <section id="work" class="container">
-      <h2>Selected work</h2>
-      <p class="muted">Swap these placeholders with your real screenshots.</p>
-      <div class="grid cols-3" style="margin-top:14px">
-        <img class="img" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop" alt="Project 1">
-        <img class="img" src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop" alt="Project 2">
-        <img class="img" src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?q=80&w=1200&auto=format&fit=crop" alt="Project 3">
-      </div>
-    </section>
-
-    <!-- Pricing -->
-    <section id="pricing" class="container">
-      <h2>Simple, transparent pricing</h2>
-      <p class="muted">50% upfront • Clear scope • 2 light revision rounds</p>
-
-      <div class="grid cols-3" style="margin-top:14px">
-        <div class="card">
-          <div class="price">$600</div>
-          <strong>Starter</strong>
-          <ul class="list">
-            <li>1-page landing + contact form</li>
-            <li>Mobile-ready + speed pass</li>
-            <li>2 minor revisions</li>
-          </ul>
-          <a class="btn primary" href="#contact" style="margin-top:8px">Start</a>
-        </div>
-
-        <div class="card" style="border-color:var(--accent)">
-          <div class="price">$1,200</div>
-          <strong>Business</strong>
-          <ul class="list">
-            <li>Up to 5 pages (AR/EN)</li>
-            <li>SEO basics + Google Business</li>
-            <li>Handoff video</li>
-          </ul>
-          <a class="btn primary" href="#contact" style="margin-top:8px">Choose</a>
-        </div>
-
-        <div class="card">
-          <div class="price">$1,800</div>
-          <strong>Pro</strong>
-          <ul class="list">
-            <li>Up to 8 pages + blog</li>
-            <li>Analytics + content outline</li>
-            <li>Training & support</li>
-          </ul>
-          <a class="btn primary" href="#contact" style="margin-top:8px">Get proposal</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Newsletter (Constant Contact later) -->
-    <section id="newsletter" class="container">
-      <h2>Join the TechNova list</h2>
-      <p class="muted">Get launch offers and tips. No spam.</p>
-      <form id="newsForm" style="display:flex; gap:8px; flex-wrap:wrap; max-width:520px;">
-        <input class="input" type="email" required placeholder="Email address" />
-        <button class="btn primary" type="submit">Subscribe</button>
+    <div class="card">
+      <h3 style="margin-top:0">Quick Project Brief</h3>
+      <form id="briefForm" class="stack" action="https://formspree.io/f/xgvlowop" method="POST">
+        <input class="input" name="name" placeholder="Your name" required />
+        <input class="input" name="_replyto" type="email" placeholder="Email address" required />
+        <input class="input" name="business" placeholder="Business / Website (optional)" />
+        <textarea class="input" name="needs" rows="4" placeholder="What do you need? (Website, Dashboard, Automation)" required></textarea>
+        <input type="hidden" name="_subject" value="Quick Project Brief — TechNova System LLC">
+        <input type="hidden" name="_format" value="json">
+        <button class="btn primary" type="submit">Send & Book</button>
+        <p id="briefStatus" class="muted" aria-live="polite"></p>
       </form>
-      <small class="muted">Demo only. Hook this to Constant Contact when ready.</small>
-    </section>
+    </div>
+  </section>
 
-    <!-- Contact -->
-    <section id="contact" class="container">
-      <h2>Contact</h2>
-      <p class="muted">Fill the form and we’ll reply within business hours. You can also WhatsApp or call.</p>
+  <!-- Short About -->
+  <section class="container">
+    <h2>Why TechNova?</h2>
+    <div class="grid cols-3 spaced">
+      <div class="card"><h3>Speed</h3><p class="muted">Launch in 5–7 days with clear milestones and scope.</p></div>
+      <div class="card"><h3>Clarity</h3><p class="muted">Fixed pricing, simple deliverables, and handoff video.</p></div>
+      <div class="card"><h3>Results</h3><p class="muted">Sites built to convert—CTA, forms, analytics baked in.</p></div>
+    </div>
+    <div class="center spaced"><a class="btn" href="services.html">Explore services →</a></div>
+  </section>
+</main>
 
-      <div class="grid cols-2" style="margin-top:14px; align-items:start">
-        <div class="card">
-          <!-- WIRED TO FORMSPREE -->
-          <form id="contactForm" class="stack" action="https://formspree.io/f/xgvlowop" method="POST">
-            <input class="input" name="name" placeholder="Full name" required />
-            <input class="input" name="_replyto" type="email" placeholder="Email" required />
-            <input class="input" name="phone" placeholder="Phone (optional)" />
-            <textarea class="input" name="message" rows="5" placeholder="Tell me about your project" required></textarea>
-
-            <input type="hidden" name="_subject" value="New message from TechNova System LLC">
-            <input type="hidden" name="_format" value="json">
-
-            <button class="btn primary" type="submit">Send message</button>
-            <p id="formStatus" class="muted" aria-live="polite"></p>
-          </form>
-        </div>
-
-        <div class="card">
-          <strong>Business</strong>
-          <p class="muted">
-            TechNova System LLC<br>
-            Email: <a href="mailto:Ruaaaltameemi@gmail.com">Ruaaaltameemi@gmail.com</a><br>
-            Phone: <a href="tel:+19165861411">+1 (916)586-1411</a><br>
-            Location: Fairfax, Virginia (Available worldwide)
-          </p>
-          <strong>Social</strong>
-          <p class="muted">
-            GitHub: <a href="https://github.com/ruaaaltameemi4" target="_blank" rel="noreferrer">ruaaaltameemi4</a>
-          </p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <section id="about" class="container">
-  <h2>About TechNova System</h2>
-  <p class="lead">
-    TechNova System is a growing tech company based in Fairfax, VA. 
-    We specialize in <b>web design, data dashboards, and Python automation</b> 
-    for small businesses and startups.
-  </p>
-
-  <div class="card" style="margin-top:14px">
-    <h3>Our Mission</h3>
-    <p>
-      To help small businesses establish a strong digital presence with 
-      affordable, modern websites and tools that save time and grow revenue.
-    </p>
+<footer class="footer-gradient">
+  <div class="container footer-wrap">
+    <img src="images/logo.png" alt="TechNova Logo" class="footer-logo">
+    <div class="footer-text">© <span id="year"></span> <strong>TechNova System LLC</strong> • <a href="#" class="footer-link">Privacy</a></div>
   </div>
+</footer>
 
-  <div class="card" style="margin-top:14px">
-    <h3>Why Work With Us?</h3>
-    <ul>
-      <li>✅ Fast project delivery (5–7 days)</li>
-      <li>✅ Clear pricing & scope — no hidden fees</li>
-      <li>✅ Portfolio available on 
-        <a href="https://github.com/ruaaaltameemi4" target="_blank">GitHub</a>
-      </li>
-      <li>✅ Bilingual support (English)</li>
-    </ul>
-  </div>
+<script>
+  // Mobile menu
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click',()=> mobileMenu.classList.toggle('open'));
 
-  <p class="muted" style="margin-top:12px">
-    <i>Note: TechNova System is in the process of official LLC registration in Virginia.</i>
-  </p>
-</section>
+  // Year
+  document.getElementById('year').textContent = new Date().getFullYear();
 
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">© <span id="year"></span> TechNova System LLC — All rights reserved • <a href="#">Privacy</a></div>
-  </footer>
-
-  <script>
-    // Mobile menu toggle
-    const menuBtn = document.getElementById('menuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    menuBtn.addEventListener('click',()=> mobileMenu.classList.toggle('open'));
-
-    // Year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Newsletter demo (still a placeholder)
-    document.getElementById('newsForm').addEventListener('submit', function(e){
-      e.preventDefault();
-      alert('Hook this to Constant Contact (embed or API).');
-    });
-
-    // ====== FORMSPREE WIRING (BOTH FORMS) ======
-    async function sendWithFormspree(formEl, statusEl) {
-      statusEl.textContent = 'Sending...';
-      try {
-        const res = await fetch(formEl.action, {
-          method: 'POST',
-          body: new FormData(formEl),
-          headers: { 'Accept': 'application/json' }
-        });
-        if (res.ok) {
-          formEl.reset();
-          statusEl.textContent = 'Thanks! Your message was sent.';
-        } else {
-          const t = await res.text();
-          statusEl.textContent = 'Error: ' + t.slice(0,180);
-        }
-      } catch (err) {
-        console.error(err);
-        statusEl.textContent = 'Network error. Please try again.';
-      }
-    }
-
-    // Quick Project Brief -> Formspree
-    const briefForm = document.getElementById('briefForm');
-    const briefStatus = document.getElementById('briefStatus');
-    briefForm.addEventListener('submit', function(e){
-      e.preventDefault();
-      sendWithFormspree(briefForm, briefStatus);
-    });
-
-    // Contact form -> Formspree
-    const contactForm = document.getElementById('contactForm');
-    const formStatus = document.getElementById('formStatus');
-    contactForm.addEventListener('submit', function(e){
-      e.preventDefault();
-      sendWithFormspree(contactForm, formStatus);
-    });
-  </script>
+  // Formspree (brief)
+  async function sendWithFormspree(formEl, statusEl) {
+    statusEl.textContent = 'Sending...';
+    try {
+      const res = await fetch(formEl.action, { method:'POST', body:new FormData(formEl), headers:{Accept:'application/json'} });
+      if (res.ok){ formEl.reset(); statusEl.textContent = 'Thanks! Your message was sent.'; }
+      else { const t = await res.text(); statusEl.textContent = 'Error: ' + t.slice(0,180); }
+    } catch { statusEl.textContent = 'Network error. Please try again.'; }
+  }
+  const briefForm = document.getElementById('briefForm');
+  const briefStatus = document.getElementById('briefStatus');
+  briefForm.addEventListener('submit', e => { e.preventDefault(); sendWithFormspree(briefForm, briefStatus); });
+</script>
 </body>
 </html>
