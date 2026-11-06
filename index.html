@@ -18,23 +18,19 @@
 
   <!-- Embedded Enhancements (Can also be pasted directly into style.css) -->
  <!-- Embedded Enhancements (Gray / Slate Theme) -->
+  <!-- Modern Tech Blue Theme -->
   <style>
     :root {
-      --primary: #334155;
-      --primary-hover: #1e293b;
-      --accent-gradient: linear-gradient(135deg, #0f172a 0%, #475569 100%);
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --accent-gradient: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
       --bg-glass: rgba(255, 255, 255, 0.85);
-      --card-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.08);
-      --card-hover-shadow: 0 20px 40px -15px rgba(51, 65, 85, 0.2);
+      --card-shadow: 0 10px 30px -10px rgba(37, 99, 235, 0.12);
+      --card-hover-shadow: 0 20px 40px -15px rgba(37, 99, 235, 0.25);
     }
 
-    body {
-      font-family: 'Inter', sans-serif;
-    }
-
-    h1, h2, h3, .brand-name {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-    }
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, h3, .brand-name { font-family: 'Plus Jakarta Sans', sans-serif; }
 
     .hero-title {
       font-size: 2.75rem;
@@ -55,18 +51,18 @@
       gap: 6px;
       padding: 6px 14px;
       border-radius: 50px;
-      background: rgba(51, 65, 85, 0.08);
+      background: rgba(37, 99, 235, 0.08);
       color: var(--primary);
       font-weight: 600;
       font-size: 0.85rem;
-      border: 1px solid rgba(51, 65, 85, 0.2);
+      border: 1px solid rgba(37, 99, 235, 0.2);
       margin-bottom: 1rem;
     }
 
     .card-modern {
       background: var(--bg-glass);
       backdrop-filter: blur(12px);
-      border: 1px solid rgba(229, 231, 235, 0.8);
+      border: 1px solid rgba(226, 232, 240, 0.8);
       border-radius: 16px;
       padding: 1.75rem;
       box-shadow: var(--card-shadow);
@@ -76,39 +72,20 @@
     .card-modern:hover {
       transform: translateY(-4px);
       box-shadow: var(--card-hover-shadow);
-      border-color: rgba(51, 65, 85, 0.3);
+      border-color: rgba(37, 99, 235, 0.3);
     }
 
     .btn-glow {
       background: var(--accent-gradient) !important;
       color: #fff !important;
       border: none !important;
-      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.3);
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
       transition: transform 0.2s ease, box-shadow 0.2s ease !important;
     }
 
     .btn-glow:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(15, 23, 42, 0.5);
-    }
-
-    .trust-metrics {
-      display: flex;
-      gap: 1.5rem;
-      margin-top: 1.5rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid rgba(229, 231, 235, 0.8);
-    }
-
-    .metric-item strong {
-      display: block;
-      font-size: 1.1rem;
-      color: #111827;
-    }
-
-    .metric-item span {
-      font-size: 0.8rem;
-      color: #6B7280;
+      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.5);
     }
   </style>
 </head>
