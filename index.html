@@ -3,18 +3,121 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title> NovaSphere System, LLC  — Web • Dashboards • Automation</title>
-  <meta name="description" content="Fast, mobile-friendly websites and dashboards for small businesses." />
+  <title>NovaSphere Systems, LLC — Web • Dashboards • Automation</title>
+  <meta name="description" content="Fast, conversion-focused websites, analytics dashboards, and custom Python automation for growing businesses." />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/logo.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Embedded Enhancements (Can also be pasted directly into style.css) -->
+  <style>
+    :root {
+      --primary: #4F46E5;
+      --primary-hover: #4338CA;
+      --accent-gradient: linear-gradient(135deg, #6366F1 0%, #A855F7 100%);
+      --bg-glass: rgba(255, 255, 255, 0.85);
+      --card-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.08);
+      --card-hover-shadow: 0 20px 40px -15px rgba(99, 102, 241, 0.2);
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    h1, h2, h3, .brand-name {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .hero-title {
+      font-size: 2.75rem;
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
+
+    .gradient-text {
+      background: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .badge-glow {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 50px;
+      background: rgba(99, 102, 241, 0.1);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.85rem;
+      border: 1px solid rgba(99, 102, 241, 0.2);
+      margin-bottom: 1rem;
+    }
+
+    .card-modern {
+      background: var(--bg-glass);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(229, 231, 235, 0.8);
+      border-radius: 16px;
+      padding: 1.75rem;
+      box-shadow: var(--card-shadow);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .card-modern:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--card-hover-shadow);
+      border-color: rgba(99, 102, 241, 0.3);
+    }
+
+    .btn-glow {
+      background: var(--accent-gradient) !important;
+      color: #fff !important;
+      border: none !important;
+      box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4);
+      transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+    }
+
+    .btn-glow:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(99, 102, 241, 0.6);
+    }
+
+    .trust-metrics {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(229, 231, 235, 0.8);
+    }
+
+    .metric-item strong {
+      display: block;
+      font-size: 1.1rem;
+      color: #111827;
+    }
+
+    .metric-item span {
+      font-size: 0.8rem;
+      color: #6B7280;
+    }
+  </style>
 </head>
 <body>
+
 <header>
   <div class="container nav">
     <div class="brand">
-      <img src="images/logo.png" alt="TechNova Logo" class="logo-img">
-      <span class="brand-name"> NovaSphere System, LLC  <small>Web • Dashboards • Automation</small></span>
+      <img src="images/logo.png" alt="NovaSphere Logo" class="logo-img" />
+      <span class="brand-name">NovaSphere <small>Web • Dashboards • Automation</small></span>
     </div>
     <nav class="links">
       <a href="services.html">Services</a>
@@ -23,8 +126,8 @@
       <a href="services.html#contact">Contact</a>
     </nav>
     <div class="actions">
-      <a class="btn" href="services.html#pricing">See Packages</a>
-      <button class="hamburger" aria-label="Menu" id="menuBtn">☰</button>
+      <a class="btn btn-glow" href="services.html#pricing">See Packages</a>
+      <button class="hamburger" aria-label="Toggle navigation menu" id="menuBtn">☰</button>
     </div>
   </div>
   <div class="container mobile" id="mobileMenu">
@@ -36,74 +139,137 @@
 </header>
 
 <main>
-  <!-- Hero -->
+  <!-- Hero Section -->
   <section class="container hero">
     <div>
-      <span class="badge">Web Design • Dashboards • Python Automation</span>
-      <h1>Websites that turn visitors into customers</h1>
-      <p class="lead">We build fast, mobile-friendly sites with clear calls-to-action so small businesses get more inquiries and sales.</p>
-      <div class="stack spaced" style="max-width:580px">
-        <a class="btn primary" href="services.html#contact">Book a free 15-min call →</a>
-        <a class="btn ghost" href="services.html#pricing">View pricing</a>
+      <div class="badge-glow">
+        <span>⚡ High-Performance Digital Solutions</span>
       </div>
-      <p class="muted spaced">Fast 5–7 day delivery • Bilingual (AR/EN) • Fixed prices</p>
+      <h1 class="hero-title">
+        Build Faster. Scale Smarter. <br />
+        <span class="gradient-text">Convert More Clients.</span>
+      </h1>
+      <p class="lead">
+        We craft lightning-fast websites, custom analytics dashboards, and seamless Python automations engineered to turn site visitors into repeat revenue.
+      </p>
+      
+      <div class="stack spaced" style="max-width:580px">
+        <a class="btn btn-glow primary" href="services.html#contact">Book Free Strategy Call →</a>
+        <a class="btn ghost" href="services.html#pricing">Explore Fixed Pricing</a>
+      </div>
+
+      <div class="trust-metrics">
+        <div class="metric-item">
+          <strong>5–7 Days</strong>
+          <span>Rapid Turnaround</span>
+        </div>
+        <div class="metric-item">
+          <strong>Bilingual</strong>
+          <span>English &amp; Arabic Support</span>
+        </div>
+        <div class="metric-item">
+          <strong>100% Fixed</strong>
+          <span>No Hidden Costs</span>
+        </div>
+      </div>
     </div>
 
-    <div class="card">
-      <h3 style="margin-top:0">Quick Project Brief</h3>
-      <form id="briefForm" class="stack" action="https://formspree.io/f/xgvlowop" method="POST">
-        <input class="input" name="name" placeholder="Your name" required />
-        <input class="input" name="_replyto" type="email" placeholder="Email address" required />
-        <input class="input" name="business" placeholder="Business / Website (optional)" />
-        <textarea class="input" name="needs" rows="4" placeholder="What do you need? (Website, Dashboard, Automation)" required></textarea>
-        <input type="hidden" name="_subject" value="Quick Project Brief — TechNova System LLC">
-        <input type="hidden" name="_format" value="json">
-        <button class="btn primary" type="submit">Send & Book</button>
+    <div class="card card-modern">
+      <h3 style="margin-top:0">Ready to Get Started?</h3>
+      <p class="muted" style="margin-top:-8px; margin-bottom: 1rem; font-size: 0.9rem;">Submit a quick brief for a free timeline &amp; quote estimate.</p>
+      
+      <form id="briefForm" class="stack" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <input class="input" name="name" placeholder="Your Full Name" required />
+        <input class="input" name="email" type="email" placeholder="Work Email Address" required />
+        <input class="input" name="business" placeholder="Company / Website URL (optional)" />
+        <textarea class="input" name="needs" rows="3" placeholder="What are your core goals? (e.g., Redesign Website, Build Sales Dashboard, Python Scripting)" required></textarea>
+        
+        <input type="hidden" name="_subject" value="New Inquiry — NovaSphere Systems LLC" />
+        <input type="hidden" name="_format" value="json" />
+        
+        <button class="btn btn-glow primary" type="submit">Submit Brief &amp; Get Estimate</button>
         <p id="briefStatus" class="muted" aria-live="polite"></p>
       </form>
     </div>
   </section>
 
-  <!-- Short About -->
-  <section class="container">
-    <h2>Why TechNova?</h2>
-    <div class="grid cols-3 spaced">
-      <div class="card"><h3>Speed</h3><p class="muted">Launch in 5–7 days with clear milestones and scope.</p></div>
-      <div class="card"><h3>Clarity</h3><p class="muted">Fixed pricing, simple deliverables, and handoff video.</p></div>
-      <div class="card"><h3>Results</h3><p class="muted">Sites built to convert—CTA, forms, analytics baked in.</p></div>
+  <!-- Value Proposition Section -->
+  <section class="container" style="padding-top: 4rem; padding-bottom: 4rem;">
+    <div style="text-align: center; max-width: 650px; margin: 0 auto 2.5rem auto;">
+      <span class="badge-glow">Why Partner With Us</span>
+      <h2>Everything Your Business Needs to Grow Online</h2>
     </div>
-    <div class="center spaced"><a class="btn" href="services.html">Explore services →</a></div>
+
+    <div class="grid cols-3 spaced">
+      <div class="card card-modern">
+        <div style="font-size: 1.75rem; margin-bottom: 0.5rem;">🚀</div>
+        <h3>Rapid Execution</h3>
+        <p class="muted">Go live in days, not months. We follow structured sprints to launch your project on time with zero fluff.</p>
+      </div>
+      <div class="card card-modern">
+        <div style="font-size: 1.75rem; margin-bottom: 0.5rem;">🎯</div>
+        <h3>Conversion Focused</h3>
+        <p class="muted">Pretty isn't enough. We build layout pathways, analytics tracking, and forms designed to generate real business leads.</p>
+      </div>
+      <div class="card card-modern">
+        <div style="font-size: 1.75rem; margin-bottom: 0.5rem;">⚙️</div>
+        <h3>Custom Automation</h3>
+        <p class="muted">Automate repetitive operational tasks with custom Python scripts, data pipelines, and interactive dashboards.</p>
+      </div>
+    </div>
+    
+    <div class="center spaced" style="margin-top: 2.5rem;">
+      <a class="btn" href="services.html">View Our Full Suite of Services →</a>
+    </div>
   </section>
 </main>
 
 <footer class="footer-gradient">
   <div class="container footer-wrap">
-    <img src="images/logo.png" alt="TechNova Logo" class="footer-logo">
-    <div class="footer-text">© <span id="year"></span> <strong>TechNova System LLC</strong> • <a href="#" class="footer-link">Privacy</a></div>
+    <img src="images/logo.png" alt="NovaSphere Logo" class="footer-logo" />
+    <div class="footer-text">
+      © <span id="year"></span> <strong>NovaSphere Systems LLC</strong> • <a href="#" class="footer-link">Privacy Policy</a>
+    </div>
   </div>
 </footer>
 
 <script>
-  // Mobile menu
+  // Mobile Menu Toggle
   const menuBtn = document.getElementById('menuBtn');
   const mobileMenu = document.getElementById('mobileMenu');
-  menuBtn.addEventListener('click',()=> mobileMenu.classList.toggle('open'));
+  menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('open'));
 
-  // Year
+  // Dynamic Copyright Year
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  // Formspree (brief)
+  // Async Formspree Submission
   async function sendWithFormspree(formEl, statusEl) {
-    statusEl.textContent = 'Sending...';
+    statusEl.textContent = 'Submitting project brief...';
     try {
-      const res = await fetch(formEl.action, { method:'POST', body:new FormData(formEl), headers:{Accept:'application/json'} });
-      if (res.ok){ formEl.reset(); statusEl.textContent = 'Thanks! Your message was sent.'; }
-      else { const t = await res.text(); statusEl.textContent = 'Error: ' + t.slice(0,180); }
-    } catch { statusEl.textContent = 'Network error. Please try again.'; }
+      const res = await fetch(formEl.action, { 
+        method: 'POST', 
+        body: new FormData(formEl), 
+        headers: { 'Accept': 'application/json' } 
+      });
+      if (res.ok) { 
+        formEl.reset(); 
+        statusEl.textContent = '🎉 Thank you! We have received your brief and will reply shortly.'; 
+      } else { 
+        const data = await res.json().catch(() => ({}));
+        statusEl.textContent = data.error || 'Submission error. Please try again.'; 
+      }
+    } catch (err) { 
+      statusEl.textContent = 'Network error. Please try again.'; 
+    }
   }
+
   const briefForm = document.getElementById('briefForm');
   const briefStatus = document.getElementById('briefStatus');
-  briefForm.addEventListener('submit', e => { e.preventDefault(); sendWithFormspree(briefForm, briefStatus); });
+  briefForm.addEventListener('submit', e => { 
+    e.preventDefault(); 
+    sendWithFormspree(briefForm, briefStatus); 
+  });
 </script>
+
 </body>
 </html>
