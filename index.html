@@ -17,14 +17,15 @@
   <link rel="stylesheet" href="style.css" />
 
   <!-- Embedded Enhancements (Can also be pasted directly into style.css) -->
+ <!-- Embedded Enhancements (Gray / Slate Theme) -->
   <style>
     :root {
-      --primary: #4F46E5;
-      --primary-hover: #4338CA;
-      --accent-gradient: linear-gradient(135deg, #6366F1 0%, #A855F7 100%);
+      --primary: #334155;
+      --primary-hover: #1e293b;
+      --accent-gradient: linear-gradient(135deg, #0f172a 0%, #475569 100%);
       --bg-glass: rgba(255, 255, 255, 0.85);
       --card-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.08);
-      --card-hover-shadow: 0 20px 40px -15px rgba(99, 102, 241, 0.2);
+      --card-hover-shadow: 0 20px 40px -15px rgba(51, 65, 85, 0.2);
     }
 
     body {
@@ -54,11 +55,11 @@
       gap: 6px;
       padding: 6px 14px;
       border-radius: 50px;
-      background: rgba(99, 102, 241, 0.1);
+      background: rgba(51, 65, 85, 0.08);
       color: var(--primary);
       font-weight: 600;
       font-size: 0.85rem;
-      border: 1px solid rgba(99, 102, 241, 0.2);
+      border: 1px solid rgba(51, 65, 85, 0.2);
       margin-bottom: 1rem;
     }
 
@@ -75,20 +76,20 @@
     .card-modern:hover {
       transform: translateY(-4px);
       box-shadow: var(--card-hover-shadow);
-      border-color: rgba(99, 102, 241, 0.3);
+      border-color: rgba(51, 65, 85, 0.3);
     }
 
     .btn-glow {
       background: var(--accent-gradient) !important;
       color: #fff !important;
       border: none !important;
-      box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4);
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.3);
       transition: transform 0.2s ease, box-shadow 0.2s ease !important;
     }
 
     .btn-glow:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(99, 102, 241, 0.6);
+      box-shadow: 0 6px 20px rgba(15, 23, 42, 0.5);
     }
 
     .trust-metrics {
