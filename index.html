@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>NovaSphere System — Web Design Portfolio</title>
-  <meta name="description" content="Explore custom web design and development projects built for growing businesses." />
+  <title>NovaSphere System — Premium Web Design Portfolio</title>
+  <meta name="description" content="High-end custom web design and development portfolio showcasing high-performance digital systems." />
   
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="images/logo.png" />
@@ -12,49 +12,87 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   
-  <link rel="stylesheet" href="style.css?v=8" />
+  <link rel="stylesheet" href="style.css?v=9" />
 
-  <!-- Embedded Modern Theme Extensions & Layout Fixes -->
+  <!-- Embedded Luxury Dark-Glass Theme Styling -->
   <style>
     :root {
-      --primary: #2563eb;
-      --primary-hover: #1d4ed8;
-      --navy-deep: #0f172a;
-      --accent-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #2563eb 100%);
+      --bg-base: #090d16;
+      --bg-surface: rgba(15, 23, 42, 0.75);
+      --bg-card: rgba(30, 41, 59, 0.6);
+      --border-glass: rgba(255, 255, 255, 0.08);
+      --border-glow: rgba(59, 130, 246, 0.35);
+      --primary: #3b82f6;
+      --primary-hover: #60a5fa;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent-gradient: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%);
       --paypal-gradient: linear-gradient(135deg, #003087 0%, #0079c1 100%);
-      --bg-glass: rgba(255, 255, 255, 0.75);
-      --card-border: rgba(226, 232, 240, 0.8);
-      --card-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.07);
-      --card-hover-shadow: 0 25px 50px -12px rgba(37, 99, 235, 0.22);
+      --shadow-luxury: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
     }
+
+    * { box-sizing: border-box; }
 
     body { 
       font-family: 'Inter', sans-serif;
-      color: #0f172a;
-      background: 
-        radial-gradient(1200px 600px at 80% -10%, rgba(37, 99, 235, 0.08) 0%, transparent 60%),
-        radial-gradient(800px 500px at -10% 40%, rgba(99, 102, 241, 0.05) 0%, transparent 50%),
-        #f8fafc;
+      color: var(--text-main);
+      background-color: var(--bg-base);
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(59, 130, 246, 0.12) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 40%),
+        radial-gradient(circle at 50% 50%, rgba(15, 23, 42, 1) 0%, #05070b 100%);
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
     }
 
     h1, h2, h3, .brand-title { 
       font-family: 'Plus Jakarta Sans', sans-serif; 
-      letter-spacing: -0.025em;
+      letter-spacing: -0.03em;
     }
 
-    /* Prevent sections from hiding behind fixed headers or overlapping */
     section[id] {
-      scroll-margin-top: 100px;
-      clear: both;
+      scroll-margin-top: 110px;
     }
 
-    /* Modern Brand Header */
+    /* Luxury Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(9, 13, 22, 0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-glass);
+      padding: 1rem 0;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
     .brand {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 12px;
+    }
+
+    .logo-img {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      object-fit: cover;
     }
 
     .brand-text {
@@ -64,24 +102,70 @@
 
     .brand-title {
       font-weight: 800;
-      font-size: 1.25rem;
-      line-height: 1.1;
-      color: var(--navy-deep);
+      font-size: 1.15rem;
+      color: #fff;
     }
 
     .brand-tagline {
-      font-weight: 600;
-      font-size: 0.725rem;
-      color: #64748b;
-      margin-top: 3px;
-      letter-spacing: 0.04em;
+      font-size: 0.675rem;
+      color: var(--text-muted);
+      letter-spacing: 0.08em;
       text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.925rem;
+      transition: color 0.2s ease;
+    }
+
+    .links a:hover {
+      color: #fff;
+    }
+
+    /* Vertical Flow Layout Stack */
+    .vertical-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 6rem;
+      padding: 4rem 0 8rem 0;
+    }
+
+    /* Hero Section - Vertical Centered Elegance */
+    .hero-vertical {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .badge-glow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 18px;
+      border-radius: 50px;
+      background: rgba(59, 130, 246, 0.1);
+      color: #60a5fa;
+      font-weight: 600;
+      font-size: 0.85rem;
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      box-shadow: 0 0 20px rgba(59, 130, 246, 0.15);
+      margin-bottom: 1.5rem;
     }
 
     .hero-title {
-      font-size: clamp(2.5rem, 5vw, 3.4rem);
+      font-size: clamp(2.75rem, 6vw, 4.25rem);
       font-weight: 800;
-      line-height: 1.12;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
     }
 
     .gradient-text {
@@ -90,89 +174,142 @@
       -webkit-text-fill-color: transparent;
     }
 
-    .badge-glow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 6px 16px;
-      border-radius: 50px;
-      background: rgba(37, 99, 235, 0.07);
-      color: var(--primary);
-      font-weight: 600;
-      font-size: 0.85rem;
-      border: 1px solid rgba(37, 99, 235, 0.2);
-      box-shadow: 0 2px 10px rgba(37, 99, 235, 0.05);
-      margin-bottom: 1.25rem;
+    .lead {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      max-width: 680px;
+      margin: 0 auto 2.5rem auto;
     }
 
-    .card-modern {
-      background: var(--bg-glass);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid var(--card-border);
-      border-radius: 24px;
-      padding: 2.25rem;
-      box-shadow: var(--card-shadow);
-      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    /* Luxury Cards & Vertical Stack Blocks */
+    .card-luxury {
+      background: var(--bg-card);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--border-glass);
+      border-radius: 28px;
+      padding: 3rem;
+      box-shadow: var(--shadow-luxury);
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
       position: relative;
     }
 
-    .card-modern:hover {
-      transform: translateY(-6px);
-      box-shadow: var(--card-hover-shadow);
-      border-color: rgba(37, 99, 235, 0.35);
+    .card-luxury:hover {
+      border-color: var(--border-glow);
+      transform: translateY(-4px);
     }
 
+    /* Buttons */
     .btn-glow {
-      background: var(--accent-gradient) !important;
-      color: #fff !important;
-      border: none !important;
+      background: var(--accent-gradient);
+      color: #fff;
+      border: none;
       font-weight: 600;
-      border-radius: 12px;
-      padding: 12px 24px;
-      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.25);
-      transition: all 0.25s ease !important;
+      border-radius: 14px;
+      padding: 14px 28px;
+      font-size: 1rem;
+      cursor: pointer;
+      box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+      transition: all 0.25s ease;
+      text-decoration: none;
+      display: inline-block;
     }
 
     .btn-glow:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(37, 99, 235, 0.4);
+      box-shadow: 0 15px 35px rgba(139, 92, 246, 0.4);
     }
 
     .btn-paypal {
-      background: var(--paypal-gradient) !important;
-      color: #fff !important;
-      border: none !important;
+      background: var(--paypal-gradient);
+      color: #fff;
+      border: none;
       font-weight: 600;
-      border-radius: 12px;
-      padding: 12px 20px;
-      box-shadow: 0 4px 14px rgba(0, 48, 135, 0.25);
-      transition: all 0.25s ease !important;
+      border-radius: 14px;
+      padding: 14px 28px;
+      font-size: 1rem;
+      cursor: pointer;
+      box-shadow: 0 10px 25px rgba(0, 48, 135, 0.4);
+      transition: all 0.25s ease;
+      width: 100%;
+      text-align: center;
     }
 
     .btn-paypal:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 22px rgba(0, 121, 193, 0.38);
+      box-shadow: 0 15px 35px rgba(0, 121, 193, 0.5);
     }
 
-    .trust-metrics {
-      display: flex;
-      gap: 2rem;
-      margin-top: 2.25rem;
-      padding-top: 2rem;
-      border-top: 1px solid rgba(226, 232, 240, 0.8);
+    /* Section Titles */
+    .section-header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 3rem auto;
     }
 
-    .metric-item strong {
-      display: block;
-      font-size: 1.2rem;
-      color: var(--navy-deep);
+    .section-header h2 {
+      font-size: 2.5rem;
       font-weight: 800;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
     }
 
-    .metric-item span {
-      font-size: 0.825rem;
-      color: #64748b;
+    /* Vertical Portfolio Showcase Rows */
+    .portfolio-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .portfolio-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-glass);
+      border-radius: 24px;
+      padding: 2.5rem;
+      transition: border-color 0.3s ease;
+    }
+
+    .portfolio-row:hover {
+      border-color: var(--border-glow);
+    }
+
+    .portfolio-info h3 {
+      font-size: 1.75rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      color: #fff;
+    }
+
+    .portfolio-preview {
+      background: rgba(15, 23, 42, 0.9);
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      height: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3.5rem;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border-glass);
+      padding: 3rem 0;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.875rem;
+    }
+
+    footer strong { color: #fff; }
+
+    @media (max-width: 768px) {
+      .portfolio-row { grid-template-columns: 1fr; gap: 1.5rem; }
+      .links { display: none; }
     }
   </style>
 </head>
@@ -184,205 +321,127 @@
       <img src="images/logo.png" alt="NovaSphere Logo" class="logo-img" />
       <div class="brand-text">
         <span class="brand-title">NovaSphere System</span>
-        <span class="brand-tagline">Web Design Portfolio &amp; Services</span>
+        <span class="brand-tagline">Custom Web Design Portfolio</span>
       </div>
     </div>
     <nav class="links">
-      <a href="#services">Services</a>
+      <a href="#about">About</a>
       <a href="#work">Work</a>
-      <a href="#pricing">Pricing</a>
+      <a href="#checkout">Checkout</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
 </header>
 
-<main>
-  <!-- Hero Section -->
-  <section id="services" class="container hero">
-    <div>
-      <div class="badge-glow">
-        <span>⚡ Professional Web Design Portfolio</span>
-      </div>
-      <h1 class="hero-title">
-        Custom Web Design <br />
-        <span class="gradient-text">Showcasing My Work.</span>
-      </h1>
-      <p class="lead">
-        Explore my custom web development projects built to elevate client brands, establish powerful online presence, and convert visitors into customers.
-      </p>
-      
-      <div class="stack spaced" style="max-width:580px">
-        <a class="btn btn-glow primary" href="#contact">Book Free Strategy Call →</a>
-        <a class="btn ghost" href="#pricing">Explore Client Checkout</a>
-      </div>
+<main class="container vertical-wrapper">
 
-      <div class="trust-metrics">
-        <div class="metric-item">
-          <strong>5–7 Days</strong>
-          <span>Rapid Turnaround</span>
-        </div>
-        <div class="metric-item">
-          <strong>Bilingual</strong>
-          <span>English &amp; Arabic Support</span>
-        </div>
-        <div class="metric-item">
-          <strong>100% Fixed</strong>
-          <span>No Hidden Costs</span>
-        </div>
-      </div>
+  <!-- 1. Hero Section -->
+  <section id="about" class="hero-vertical">
+    <div class="badge-glow">
+      <span>✦ Elite Web Design &amp; Digital Architecture</span>
+    </div>
+    <h1 class="hero-title">
+      Crafting Digital Masterpieces <br />
+      <span class="gradient-text">For Exceptional Businesses.</span>
+    </h1>
+    <p class="lead">
+      NovaSphere System LLC designs and develops ultra-fast, visually stunning custom websites tailored to elevate brands, build absolute credibility, and convert visitors into high-value clients.
+    </p>
+    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+      <a class="btn-glow" href="#work">Explore Portfolio ↓</a>
+      <a class="btn-glow" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);" href="#checkout">Secure Client Checkout</a>
+    </div>
+  </section>
+
+  <!-- 2. Portfolio Showcase Section (Vertical Stack) -->
+  <section id="work">
+    <div class="section-header">
+      <span style="color: var(--primary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.8rem;">Featured Projects</span>
+      <h2>Showcasing Custom Web Work</h2>
+      <p style="color: var(--text-muted);">A vertical showcase highlighting performance, refined aesthetics, and seamless user experiences.</p>
     </div>
 
-    <!-- Quick Inquiry Form -->
-    <div class="card card-modern">
-      <h3 style="margin-top:0; font-size: 1.5rem;">Ready to Start a Project?</h3>
-      <p class="muted" style="margin-top:-6px; margin-bottom: 1.25rem; font-size: 0.9rem;">Submit a quick brief for a free timeline &amp; quote estimate.</p>
-      
-      <form id="briefForm" class="stack" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <input class="input" name="name" placeholder="Your Full Name" required />
-        <input class="input" name="email" type="email" placeholder="Work Email Address" required />
-        <input class="input" name="business" placeholder="Company / Website URL (optional)" />
-        <textarea class="input" name="needs" rows="3" placeholder="Tell me about your website design goals..." required></textarea>
+    <div class="portfolio-stack">
+      <!-- Project 1 -->
+      <div class="portfolio-row">
+        <div class="portfolio-info">
+          <span style="color: #60a5fa; font-size: 0.85rem; font-weight: 600;">Corporate &amp; Enterprise</span>
+          <h3>Modern Executive Web Platforms</h3>
+          <p style="color: var(--text-muted); line-height: 1.6;">Designed for established businesses requiring high-end branding, fast load speeds, responsive layouts, and rock-solid architecture.</p>
+        </div>
+        <div class="portfolio-preview">💼</div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="portfolio-row">
+        <div class="portfolio-info">
+          <span style="color: #a78bfa; font-size: 0.85rem; font-weight: 600;">Creative &amp; Portfolios</span>
+          <h3>Immersive Visual Portfolios</h3>
+          <p style="color: var(--text-muted); line-height: 1.6;">Built specifically to put creative work front and center with clean typography, elegant spacing, and striking dark-glass aesthetics.</p>
+        </div>
+        <div class="portfolio-preview">✨</div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="portfolio-row">
+        <div class="portfolio-info">
+          <span style="color: #f472b6; font-size: 0.85rem; font-weight: 600;">Conversion Landing Pages</span>
+          <h3>High-Impact Lead Generators</h3>
+          <p style="color: var(--text-muted); line-height: 1.6;">Engineered single-page conversion funnels equipped with strategic call-to-actions, lightning speed, and direct customer inquiry forms.</p>
+        </div>
+        <div class="portfolio-preview">🚀</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Secure Flexible PayPal Checkout Section -->
+  <section id="checkout">
+    <div class="section-header">
+      <span style="color: var(--primary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.8rem;">Flexible Billing</span>
+      <h2>Secure Project Payments</h2>
+      <p style="color: var(--text-muted);">Easily send project retainers, milestone deposits, or custom invoice payments.</p>
+    </div>
+
+    <div class="card-luxury" style="max-width: 600px; margin: 0 auto; text-align: center;">
+      <div style="font-size: 3rem; margin-bottom: 1rem;">💳</div>
+      <h3 style="font-size: 1.8rem; margin-top: 0; margin-bottom: 0.75rem;">Custom Project Retainer</h3>
+      <p style="color: var(--text-muted); line-height: 1.6; margin-bottom: 2rem;">
+        Enter any custom invoice amount or agreed milestone price to securely complete your payment via PayPal.
+      </p>
+
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+        <input type="hidden" name="cmd" value="_xclick" />
+        <input type="hidden" name="business" value="Ruaasaad70@yahoo.com" />
+        <input type="hidden" name="item_name" value="NovaSphere System — Custom Web Project Payment" />
+        <input type="hidden" name="currency_code" value="USD" />
         
-        <input type="hidden" name="_subject" value="New Inquiry — NovaSphere System LLC" />
-        <input type="hidden" name="_format" value="json" />
-        
-        <button class="btn btn-glow primary" type="submit" style="width:100%;">Submit Brief &amp; Get Estimate</button>
-        <p id="briefStatus" class="muted" aria-live="polite" style="margin-top: 0.5rem; font-size: 0.85rem;"></p>
+        <button type="submit" class="btn-paypal">
+          Pay Custom Amount via PayPal →
+        </button>
       </form>
     </div>
   </section>
 
-  <!-- Work Portfolio Section -->
-  <section id="work" class="container" style="padding-top: 5rem; padding-bottom: 5rem;">
-    <div style="text-align: center; max-width: 650px; margin: 0 auto 3rem auto;">
-      <span class="badge-glow">Portfolio Highlights</span>
-      <h2>Featured Web Design Projects</h2>
-      <p class="muted">A showcase of custom websites built to highlight client work and drive engagement.</p>
-    </div>
-
-    <div class="grid cols-3 spaced">
-      <div class="card card-modern">
-        <div style="font-size: 2rem; margin-bottom: 0.75rem;">💻</div>
-        <h3>Corporate &amp; Business Site</h3>
-        <p class="muted" style="font-size: 0.875rem; line-height: 1.5;">Sleek, responsive corporate web layouts tailored to establish instant market credibility.</p>
-      </div>
-
-      <div class="card card-modern">
-        <div style="font-size: 2rem; margin-bottom: 0.75rem;">🎨</div>
-        <h3>Creative Portfolios</h3>
-        <p class="muted" style="font-size: 0.875rem; line-height: 1.5;">Visual-first layouts designed to showcase professional work with elegance and speed.</p>
-      </div>
-
-      <div class="card card-modern">
-        <div style="font-size: 2rem; margin-bottom: 0.75rem;">⚡</div>
-        <h3>High-Converting Landing Pages</h3>
-        <p class="muted" style="font-size: 0.875rem; line-height: 1.5;">Focused single-page layouts optimized specifically to capture leads and customer inquiries.</p>
-      </div>
+  <!-- 4. Contact Section -->
+  <section id="contact">
+    <div class="card-luxury" style="max-width: 750px; margin: 0 auto; text-align: center;">
+      <h2>Let's Build Your Digital Presence</h2>
+      <p style="color: var(--text-muted); margin-bottom: 2rem;">Ready to elevate your business with a world-class website? Get in touch today.</p>
+      <a class="btn-glow" href="mailto:Ruaasaad70@yahoo.com">Contact Me Directly →</a>
     </div>
   </section>
 
-  <!-- Pricing & Flexible PayPal Payments Section -->
-  <section id="pricing" class="container" style="padding-bottom: 5rem;">
-    <div style="text-align: center; max-width: 650px; margin: 0 auto 3rem auto;">
-      <span class="badge-glow">Client Checkout</span>
-      <h2>Secure Project Payments</h2>
-      <p class="muted">Send payments or milestone deposits for your website project securely via PayPal.</p>
-    </div>
-
-    <div class="grid cols-3 spaced">
-      <div class="card card-modern">
-        <div style="font-size: 2rem; margin-bottom: 0.75rem;">🚀</div>
-        <h3>Rapid Execution</h3>
-        <p class="muted" style="font-size: 0.875rem; line-height: 1.5;">Go live in days, not months with structured design sprints.</p>
-      </div>
-
-      <div class="card card-modern">
-        <div style="font-size: 2rem; margin-bottom: 0.75rem;">🎯</div>
-        <h3>Conversion Focused</h3>
-        <p class="muted" style="font-size: 0.875rem; line-height: 1.5;">Intuitive navigation and contact forms designed to generate leads.</p>
-      </div>
-
-      <!-- Card 3: Any Amount PayPal Checkout -->
-      <div class="card card-modern" style="border: 2px solid rgba(37, 99, 235, 0.4);">
-        <div style="font-size: 2rem; margin-bottom: 0.75rem;">💳</div>
-        <h3>Pay Any Amount</h3>
-        <p class="muted" style="font-size: 0.875rem; line-height: 1.5;">
-          Pay a custom invoice, project retainer, or milestone deposit agreed upon for your website build.
-        </p>
-        
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="margin-top: 1.5rem;">
-          <input type="hidden" name="cmd" value="_xclick" />
-          <input type="hidden" name="business" value="Ruaasaad70@yahoo.com" />
-          <input type="hidden" name="item_name" value="NovaSphere System — Website Project Payment" />
-          <input type="hidden" name="currency_code" value="USD" />
-          
-          <button type="submit" class="btn btn-paypal" style="width: 100%; cursor: pointer;">
-            Pay Custom Amount via PayPal →
-          </button>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="container" style="padding-bottom: 5rem;">
-    <div class="card card-modern" style="text-align: center; max-width: 700px; margin: 0 auto;">
-      <h2>Let's Build Your Website</h2>
-      <p class="muted" style="margin-top: 0.5rem; margin-bottom: 1.5rem;">Ready to showcase your business online? Reach out to get started today.</p>
-      <a class="btn btn-glow primary" href="mailto:Ruaasaad70@yahoo.com">Email Me Directly →</a>
-    </div>
-  </section>
 </main>
 
-<footer class="footer-gradient">
-  <div class="container footer-wrap">
-    <img src="images/logo.png" alt="NovaSphere Logo" class="footer-logo" />
-    <div class="footer-text">
-      © <span id="year"></span> <strong>NovaSphere System LLC</strong> • <a href="#" class="footer-link">Privacy Policy</a>
-    </div>
+<footer>
+  <div class="container">
+    © <span id="year"></span> <strong>NovaSphere System LLC</strong>. All rights reserved.
   </div>
 </footer>
 
 <script>
-  // Mobile Menu Toggle
-  const menuBtn = document.getElementById('menuBtn');
-  const mobileMenu = document.getElementById('mobileMenu');
-  if (menuBtn && mobileMenu) {
-    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('open'));
-  }
-
   // Dynamic Copyright Year
   document.getElementById('year').textContent = new Date().getFullYear();
-
-  // Async Formspree Submission
-  async function sendWithFormspree(formEl, statusEl) {
-    statusEl.textContent = 'Submitting project brief...';
-    try {
-      const res = await fetch(formEl.action, { 
-        method: 'POST', 
-        body: new FormData(formEl), 
-        headers: { 'Accept': 'application/json' } 
-      });
-      if (res.ok) { 
-        formEl.reset(); 
-        statusEl.textContent = '🎉 Thank you! We have received your brief and will reply shortly.'; 
-      } else { 
-        const data = await res.json().catch(() => ({}));
-        statusEl.textContent = data.error || 'Submission error. Please try again.'; 
-      }
-    } catch (err) { 
-      statusEl.textContent = 'Network error. Please try again.'; 
-    }
-  }
-
-  const briefForm = document.getElementById('briefForm');
-  const briefStatus = document.getElementById('briefStatus');
-  if (briefForm) {
-    briefForm.addEventListener('submit', e => { 
-      e.preventDefault(); 
-      sendWithFormspree(briefForm, briefStatus); 
-    });
-  }
 </script>
 
 </body>
