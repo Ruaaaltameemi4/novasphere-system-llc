@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>NovaSphere System — Custom Web Development</title>
-  <meta name="description" content="High-performance, conversion-focused websites built for businesses of all sizes." />
+  <title>NovaSphere System — Web Design Portfolio</title>
+  <meta name="description" content="Explore custom web design and development projects built for growing businesses." />
   
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="images/logo.png" />
@@ -14,9 +14,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   
-  <link rel="stylesheet" href="style.css?v=7" />
+  <link rel="stylesheet" href="style.css?v=8" />
 
-  <!-- Embedded Modern Theme Extensions -->
+  <!-- Embedded Modern Theme Extensions & Layout Fixes -->
   <style>
     :root {
       --primary: #2563eb;
@@ -42,6 +42,12 @@
     h1, h2, h3, .brand-title { 
       font-family: 'Plus Jakarta Sans', sans-serif; 
       letter-spacing: -0.025em;
+    }
+
+    /* Prevent sections from hiding behind fixed headers or overlapping */
+    section[id] {
+      scroll-margin-top: 100px;
+      clear: both;
     }
 
     /* Modern Brand Header */
@@ -178,36 +184,36 @@
       <img src="images/logo.png" alt="NovaSphere Logo" class="logo-img" />
       <div class="brand-text">
         <span class="brand-title">NovaSphere System</span>
-        <span class="brand-tagline">Custom Web Development for All Businesses</span>
+        <span class="brand-tagline">Web Design Portfolio &amp; Services</span>
       </div>
     </div>
     <nav class="links">
-      <a href="services.html">Services</a>
-      <a href="services.html#work">Work</a>
-      <a href="services.html#pricing">Pricing</a>
-      <a href="services.html#contact">Contact</a>
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
     </nav>
   </div>
 </header>
 
 <main>
   <!-- Hero Section -->
-  <section class="container hero">
+  <section id="services" class="container hero">
     <div>
       <div class="badge-glow">
-        <span>⚡ Professional Web Design & Development</span>
+        <span>⚡ Professional Web Design Portfolio</span>
       </div>
       <h1 class="hero-title">
-        Custom Websites Built for <br />
-        <span class="gradient-text">Every Type of Business.</span>
+        Custom Web Design <br />
+        <span class="gradient-text">Showcasing My Work.</span>
       </h1>
       <p class="lead">
-        We craft lightning-fast, high-converting websites tailored to elevate your brand, build instant credibility, and turn site visitors into paying clients.
+        Explore my custom web development projects built to elevate client brands, establish powerful online presence, and convert visitors into customers.
       </p>
       
       <div class="stack spaced" style="max-width:580px">
-        <a class="btn btn-glow primary" href="services.html#contact">Book Free Strategy Call →</a>
-        <a class="btn ghost" href="services.html#pricing">Explore Pricing & Payments</a>
+        <a class="btn btn-glow primary" href="#contact">Book Free Strategy Call →</a>
+        <a class="btn ghost" href="#pricing">Explore Client Checkout</a>
       </div>
 
       <div class="trust-metrics">
@@ -228,14 +234,14 @@
 
     <!-- Quick Inquiry Form -->
     <div class="card card-modern">
-      <h3 style="margin-top:0; font-size: 1.5rem;">Ready for a New Website?</h3>
+      <h3 style="margin-top:0; font-size: 1.5rem;">Ready to Start a Project?</h3>
       <p class="muted" style="margin-top:-6px; margin-bottom: 1.25rem; font-size: 0.9rem;">Submit a quick brief for a free timeline &amp; quote estimate.</p>
       
       <form id="briefForm" class="stack" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
         <input class="input" name="name" placeholder="Your Full Name" required />
         <input class="input" name="email" type="email" placeholder="Work Email Address" required />
         <input class="input" name="business" placeholder="Company / Website URL (optional)" />
-        <textarea class="input" name="needs" rows="3" placeholder="Tell us about your business and website goals..." required></textarea>
+        <textarea class="input" name="needs" rows="3" placeholder="Tell me about your website design goals..." required></textarea>
         
         <input type="hidden" name="_subject" value="New Inquiry — NovaSphere System LLC" />
         <input type="hidden" name="_format" value="json" />
@@ -246,27 +252,54 @@
     </div>
   </section>
 
-  <!-- Value Proposition & Flexible PayPal Payments -->
-  <section class="container" style="padding-top: 5rem; padding-bottom: 5rem;">
+  <!-- Work Portfolio Section -->
+  <section id="work" class="container" style="padding-top: 5rem; padding-bottom: 5rem;">
     <div style="text-align: center; max-width: 650px; margin: 0 auto 3rem auto;">
-      <span class="badge-glow">Flexible Client Checkout</span>
-      <h2>Professional Web Solutions for All Industries</h2>
+      <span class="badge-glow">Portfolio Highlights</span>
+      <h2>Featured Web Design Projects</h2>
+      <p class="muted">A showcase of custom websites built to highlight client work and drive engagement.</p>
+    </div>
+
+    <div class="grid cols-3 spaced">
+      <div class="card card-modern">
+        <div style="font-size: 2rem; margin-bottom: 0.75rem;">💻</div>
+        <h3>Corporate &amp; Business Site</h3>
+        <p class="muted" style="font-size: 0.875rem; line-height: 1.5;">Sleek, responsive corporate web layouts tailored to establish instant market credibility.</p>
+      </div>
+
+      <div class="card card-modern">
+        <div style="font-size: 2rem; margin-bottom: 0.75rem;">🎨</div>
+        <h3>Creative Portfolios</h3>
+        <p class="muted" style="font-size: 0.875rem; line-height: 1.5;">Visual-first layouts designed to showcase professional work with elegance and speed.</p>
+      </div>
+
+      <div class="card card-modern">
+        <div style="font-size: 2rem; margin-bottom: 0.75rem;">⚡</div>
+        <h3>High-Converting Landing Pages</h3>
+        <p class="muted" style="font-size: 0.875rem; line-height: 1.5;">Focused single-page layouts optimized specifically to capture leads and customer inquiries.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing & Flexible PayPal Payments Section -->
+  <section id="pricing" class="container" style="padding-bottom: 5rem;">
+    <div style="text-align: center; max-width: 650px; margin: 0 auto 3rem auto;">
+      <span class="badge-glow">Client Checkout</span>
+      <h2>Secure Project Payments</h2>
       <p class="muted">Send payments or milestone deposits for your website project securely via PayPal.</p>
     </div>
 
     <div class="grid cols-3 spaced">
-      <!-- Card 1 -->
       <div class="card card-modern">
         <div style="font-size: 2rem; margin-bottom: 0.75rem;">🚀</div>
         <h3>Rapid Execution</h3>
-        <p class="muted" style="font-size: 0.875rem; line-height: 1.5;">Go live in days, not months. We follow structured design sprints to launch your business website on time.</p>
+        <p class="muted" style="font-size: 0.875rem; line-height: 1.5;">Go live in days, not months with structured design sprints.</p>
       </div>
 
-      <!-- Card 2 -->
       <div class="card card-modern">
         <div style="font-size: 2rem; margin-bottom: 0.75rem;">🎯</div>
         <h3>Conversion Focused</h3>
-        <p class="muted" style="font-size: 0.875rem; line-height: 1.5;">Pretty layouts aren't enough. We build intuitive pathways and contact flows designed to generate real customer inquiries.</p>
+        <p class="muted" style="font-size: 0.875rem; line-height: 1.5;">Intuitive navigation and contact forms designed to generate leads.</p>
       </div>
 
       <!-- Card 3: Any Amount PayPal Checkout -->
@@ -289,9 +322,14 @@
         </form>
       </div>
     </div>
-    
-    <div class="center spaced" style="margin-top: 3rem; text-align: center;">
-      <a class="btn" href="services.html" style="font-weight: 600; text-decoration: underline;">View Detailed Feature Breakdown →</a>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="container" style="padding-bottom: 5rem;">
+    <div class="card card-modern" style="text-align: center; max-width: 700px; margin: 0 auto;">
+      <h2>Let's Build Your Website</h2>
+      <p class="muted" style="margin-top: 0.5rem; margin-bottom: 1.5rem;">Ready to showcase your business online? Reach out to get started today.</p>
+      <a class="btn btn-glow primary" href="mailto:Ruaasaad70@yahoo.com">Email Me Directly →</a>
     </div>
   </section>
 </main>
