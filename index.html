@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>NovaSphere System — Premium Web Design Portfolio</title>
-  <meta name="description" content="High-end custom web design and development portfolio showcasing high-performance digital systems." />
+  <title>NovaSphere System — Professional Web Design</title>
+  <meta name="description" content="Affordable, high-performance custom web design and development for growing businesses." />
   
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="images/logo.png" />
@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   
-  <link rel="stylesheet" href="style.css?v=9" />
+  <link rel="stylesheet" href="style.css?v=10" />
 
   <!-- Embedded Luxury Dark-Glass Theme Styling -->
   <style>
@@ -200,6 +200,48 @@
       transform: translateY(-4px);
     }
 
+    /* Pricing Grid (Vertical cards stack nicely on mobile, 3-cols on desktop) */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .pricing-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-glass);
+      border-radius: 24px;
+      padding: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .pricing-card:hover {
+      border-color: var(--border-glow);
+      transform: translateY(-4px);
+    }
+
+    .pricing-card.featured {
+      border: 2px solid var(--primary);
+      background: rgba(30, 41, 59, 0.85);
+    }
+
+    .popular-tag {
+      position: absolute;
+      top: -14px;
+      right: 24px;
+      background: var(--accent-gradient);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+      text-transform: uppercase;
+    }
+
     /* Buttons */
     .btn-glow {
       background: var(--accent-gradient);
@@ -214,6 +256,7 @@
       transition: all 0.25s ease;
       text-decoration: none;
       display: inline-block;
+      text-align: center;
     }
 
     .btn-glow:hover {
@@ -227,8 +270,8 @@
       border: none;
       font-weight: 600;
       border-radius: 14px;
-      padding: 14px 28px;
-      font-size: 1rem;
+      padding: 14px 20px;
+      font-size: 0.95rem;
       cursor: pointer;
       box-shadow: 0 10px 25px rgba(0, 48, 135, 0.4);
       transition: all 0.25s ease;
@@ -321,13 +364,13 @@
       <img src="images/logo.png" alt="NovaSphere Logo" class="logo-img" />
       <div class="brand-text">
         <span class="brand-title">NovaSphere System</span>
-        <span class="brand-tagline">Custom Web Design Portfolio</span>
+        <span class="brand-tagline">Custom Web Design Studio</span>
       </div>
     </div>
     <nav class="links">
       <a href="#about">About</a>
       <a href="#work">Work</a>
-      <a href="#checkout">Checkout</a>
+      <a href="#pricing">Pricing &amp; Pay</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
@@ -338,46 +381,46 @@
   <!-- 1. Hero Section -->
   <section id="about" class="hero-vertical">
     <div class="badge-glow">
-      <span>✦ Elite Web Design &amp; Digital Architecture</span>
+      <span>✦ Professional Web Design &amp; Development</span>
     </div>
     <h1 class="hero-title">
-      Crafting Digital Masterpieces <br />
-      <span class="gradient-text">For Exceptional Businesses.</span>
+      Custom Websites Built for <br />
+      <span class="gradient-text">Every Business.</span>
     </h1>
     <p class="lead">
-      NovaSphere System LLC designs and develops ultra-fast, visually stunning custom websites tailored to elevate brands, build absolute credibility, and convert visitors into high-value clients.
+      NovaSphere System LLC crafts ultra-fast, modern, conversion-focused websites designed to showcase your brand, build instant trust, and attract local and global clients.
     </p>
     <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-      <a class="btn-glow" href="#work">Explore Portfolio ↓</a>
-      <a class="btn-glow" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);" href="#checkout">Secure Client Checkout</a>
+      <a class="btn-glow" href="#work">View My Work ↓</a>
+      <a class="btn-glow" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);" href="#pricing">View Beginner Packages</a>
     </div>
   </section>
 
   <!-- 2. Portfolio Showcase Section (Vertical Stack) -->
   <section id="work">
     <div class="section-header">
-      <span style="color: var(--primary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.8rem;">Featured Projects</span>
-      <h2>Showcasing Custom Web Work</h2>
-      <p style="color: var(--text-muted);">A vertical showcase highlighting performance, refined aesthetics, and seamless user experiences.</p>
+      <span style="color: var(--primary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.8rem;">Portfolio Showcase</span>
+      <h2>Featured Web Design Projects</h2>
+      <p style="color: var(--text-muted);">A vertical showcase highlighting clean code, fast performance, and professional aesthetics.</p>
     </div>
 
     <div class="portfolio-stack">
       <!-- Project 1 -->
       <div class="portfolio-row">
         <div class="portfolio-info">
-          <span style="color: #60a5fa; font-size: 0.85rem; font-weight: 600;">Corporate &amp; Enterprise</span>
-          <h3>Modern Executive Web Platforms</h3>
-          <p style="color: var(--text-muted); line-height: 1.6;">Designed for established businesses requiring high-end branding, fast load speeds, responsive layouts, and rock-solid architecture.</p>
+          <span style="color: #60a5fa; font-size: 0.85rem; font-weight: 600;">Small Business Websites</span>
+          <h3>Local Business Web Presence</h3>
+          <p style="color: var(--text-muted); line-height: 1.6;">Clean, mobile-responsive websites built for local shops, service providers, and professionals looking to establish immediate online credibility.</p>
         </div>
-        <div class="portfolio-preview">💼</div>
+        <div class="portfolio-preview">🏢</div>
       </div>
 
       <!-- Project 2 -->
       <div class="portfolio-row">
         <div class="portfolio-info">
-          <span style="color: #a78bfa; font-size: 0.85rem; font-weight: 600;">Creative &amp; Portfolios</span>
-          <h3>Immersive Visual Portfolios</h3>
-          <p style="color: var(--text-muted); line-height: 1.6;">Built specifically to put creative work front and center with clean typography, elegant spacing, and striking dark-glass aesthetics.</p>
+          <span style="color: #a78bfa; font-size: 0.85rem; font-weight: 600;">Creative Portfolios</span>
+          <h3>Visual Portfolios &amp; Showcases</h3>
+          <p style="color: var(--text-muted); line-height: 1.6;">Sleek, image-forward layouts tailored to highlight creative work, photography, or personal portfolios with immaculate style.</p>
         </div>
         <div class="portfolio-preview">✨</div>
       </div>
@@ -385,64 +428,35 @@
       <!-- Project 3 -->
       <div class="portfolio-row">
         <div class="portfolio-info">
-          <span style="color: #f472b6; font-size: 0.85rem; font-weight: 600;">Conversion Landing Pages</span>
-          <h3>High-Impact Lead Generators</h3>
-          <p style="color: var(--text-muted); line-height: 1.6;">Engineered single-page conversion funnels equipped with strategic call-to-actions, lightning speed, and direct customer inquiry forms.</p>
+          <span style="color: #f472b6; font-size: 0.85rem; font-weight: 600;">Landing Pages</span>
+          <h3>High-Converting Lead Pages</h3>
+          <p style="color: var(--text-muted); line-height: 1.6;">Focused single-page designs engineered to capture customer inquiries, featuring fast load times and clean contact integration.</p>
         </div>
         <div class="portfolio-preview">🚀</div>
       </div>
     </div>
   </section>
 
-  <!-- 3. Secure Flexible PayPal Checkout Section -->
-  <section id="checkout">
+  <!-- 3. Beginner Tiered Pricing & PayPal Checkout -->
+  <section id="pricing">
     <div class="section-header">
-      <span style="color: var(--primary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.8rem;">Flexible Billing</span>
-      <h2>Secure Project Payments</h2>
-      <p style="color: var(--text-muted);">Easily send project retainers, milestone deposits, or custom invoice payments.</p>
+      <span style="color: var(--primary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.8rem;">Transparent Pricing</span>
+      <h2>Beginner Packages &amp; Checkout</h2>
+      <p style="color: var(--text-muted);">Choose a beginner-friendly package below or pay a custom invoice amount securely via PayPal.</p>
     </div>
 
-    <div class="card-luxury" style="max-width: 600px; margin: 0 auto; text-align: center;">
-      <div style="font-size: 3rem; margin-bottom: 1rem;">💳</div>
-      <h3 style="font-size: 1.8rem; margin-top: 0; margin-bottom: 0.75rem;">Custom Project Retainer</h3>
-      <p style="color: var(--text-muted); line-height: 1.6; margin-bottom: 2rem;">
-        Enter any custom invoice amount or agreed milestone price to securely complete your payment via PayPal.
-      </p>
-
-      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-        <input type="hidden" name="cmd" value="_xclick" />
-        <input type="hidden" name="business" value="Ruaasaad70@yahoo.com" />
-        <input type="hidden" name="item_name" value="NovaSphere System — Custom Web Project Payment" />
-        <input type="hidden" name="currency_code" value="USD" />
-        
-        <button type="submit" class="btn-paypal">
-          Pay Custom Amount via PayPal →
-        </button>
-      </form>
-    </div>
-  </section>
-
-  <!-- 4. Contact Section -->
-  <section id="contact">
-    <div class="card-luxury" style="max-width: 750px; margin: 0 auto; text-align: center;">
-      <h2>Let's Build Your Digital Presence</h2>
-      <p style="color: var(--text-muted); margin-bottom: 2rem;">Ready to elevate your business with a world-class website? Get in touch today.</p>
-      <a class="btn-glow" href="mailto:Ruaasaad70@yahoo.com">Contact Me Directly →</a>
-    </div>
-  </section>
-
-</main>
-
-<footer>
-  <div class="container">
-    © <span id="year"></span> <strong>NovaSphere System LLC</strong>. All rights reserved.
-  </div>
-</footer>
-
-<script>
-  // Dynamic Copyright Year
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-
-</body>
-</html>
+    <div class="pricing-grid">
+      <!-- Starter Tier ($300) -->
+      <div class="pricing-card">
+        <div>
+          <h3>Starter Landing Page</h3>
+          <p style="font-size: 2rem; font-weight: 800; color: #fff; margin: 1rem 0;">$300 <span style="font-size: 0.85rem; font-weight: 400; color: var(--text-muted);">USD</span></p>
+          <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; margin-bottom: 2rem;">Perfect for new businesses needing a fast, mobile-friendly 1-page landing site and contact form.</p>
+        </div>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+          <input type="hidden" name="cmd" value="_xclick" />
+          <input type="hidden" name="business" value="Ruaasaad70@yahoo.com" />
+          <input type="hidden" name="item_name" value="NovaSphere System — Starter Landing Page ($300)" />
+          <input type="hidden" name="amount" value="300.00" />
+          <input type="hidden" name="currency_code" value="USD" />
+          <button type="submit" class="btn-paypal">Pay $300 via
