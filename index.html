@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>NovaSphere System — Professional Web Design</title>
-  <meta name="description" content="Affordable, high-performance custom web design and development for growing businesses." />
+  <title>NovaSphere System — Custom Web Design Studio</title>
+  <meta name="description" content="High-performance custom web design and development built for global businesses by Ruaa Saad Altameemi." />
   
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="images/logo.png" />
@@ -14,23 +14,24 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   
-  <link rel="stylesheet" href="style.css?v=10" />
+  <link rel="stylesheet" href="style.css?v=11" />
 
-  <!-- Embedded Luxury Dark-Glass Theme Styling -->
+  <!-- Embedded Premium Theme Extensions & Shiny Effects -->
   <style>
     :root {
-      --bg-base: #090d16;
+      --bg-base: #070a12;
       --bg-surface: rgba(15, 23, 42, 0.75);
-      --bg-card: rgba(30, 41, 59, 0.6);
-      --border-glass: rgba(255, 255, 255, 0.08);
-      --border-glow: rgba(59, 130, 246, 0.35);
+      --bg-card: rgba(30, 41, 59, 0.55);
+      --border-glass: rgba(255, 255, 255, 0.12);
+      --border-glow: rgba(59, 130, 246, 0.45);
       --primary: #3b82f6;
       --primary-hover: #60a5fa;
       --text-main: #f8fafc;
       --text-muted: #94a3b8;
       --accent-gradient: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%);
+      --shiny-glow: radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.25) 0%, transparent 70%);
       --paypal-gradient: linear-gradient(135deg, #003087 0%, #0079c1 100%);
-      --shadow-luxury: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+      --shadow-luxury: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
     }
 
     * { box-sizing: border-box; }
@@ -40,9 +41,10 @@
       color: var(--text-main);
       background-color: var(--bg-base);
       background-image: 
-        radial-gradient(circle at 10% 20%, rgba(59, 130, 246, 0.12) 0%, transparent 40%),
-        radial-gradient(circle at 90% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 40%),
-        radial-gradient(circle at 50% 50%, rgba(15, 23, 42, 1) 0%, #05070b 100%);
+        radial-gradient(circle at 15% 15%, rgba(59, 130, 246, 0.18) 0%, transparent 45%),
+        radial-gradient(circle at 85% 75%, rgba(139, 92, 246, 0.15) 0%, transparent 45%),
+        radial-gradient(circle at 50% 30%, rgba(236, 72, 153, 0.08) 0%, transparent 50%),
+        #05070b;
       background-attachment: fixed;
       margin: 0;
       padding: 0;
@@ -58,12 +60,12 @@
       scroll-margin-top: 110px;
     }
 
-    /* Luxury Header */
+    /* Shiny Header Navbar */
     header {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(9, 13, 22, 0.85);
+      background: rgba(7, 10, 18, 0.85);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
       border-bottom: 1px solid var(--border-glass);
@@ -89,10 +91,11 @@
     }
 
     .logo-img {
-      width: 40px;
-      height: 40px;
-      border-radius: 10px;
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
       object-fit: cover;
+      box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
     }
 
     .brand-text {
@@ -102,7 +105,7 @@
 
     .brand-title {
       font-weight: 800;
-      font-size: 1.15rem;
+      font-size: 1.2rem;
       color: #fff;
     }
 
@@ -139,25 +142,26 @@
       padding: 4rem 0 8rem 0;
     }
 
-    /* Hero Section - Vertical Centered Elegance */
+    /* Hero Section - Centered Luxury Glow */
     .hero-vertical {
       text-align: center;
-      max-width: 800px;
+      max-width: 850px;
       margin: 0 auto;
+      position: relative;
     }
 
     .badge-glow {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 6px 18px;
+      padding: 6px 20px;
       border-radius: 50px;
-      background: rgba(59, 130, 246, 0.1);
+      background: rgba(59, 130, 246, 0.12);
       color: #60a5fa;
       font-weight: 600;
-      font-size: 0.85rem;
-      border: 1px solid rgba(59, 130, 246, 0.3);
-      box-shadow: 0 0 20px rgba(59, 130, 246, 0.15);
+      font-size: 0.875rem;
+      border: 1px solid rgba(59, 130, 246, 0.35);
+      box-shadow: 0 0 25px rgba(59, 130, 246, 0.25);
       margin-bottom: 1.5rem;
     }
 
@@ -182,7 +186,7 @@
       margin: 0 auto 2.5rem auto;
     }
 
-    /* Luxury Cards & Vertical Stack Blocks */
+    /* Glassmorphism Cards */
     .card-luxury {
       background: var(--bg-card);
       backdrop-filter: blur(20px);
@@ -193,14 +197,27 @@
       box-shadow: var(--shadow-luxury);
       transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
       position: relative;
+      overflow: hidden;
+    }
+
+    .card-luxury::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--accent-gradient);
+      opacity: 0.7;
     }
 
     .card-luxury:hover {
       border-color: var(--border-glow);
       transform: translateY(-4px);
+      box-shadow: 0 30px 60px -15px rgba(59, 130, 246, 0.2);
     }
 
-    /* Pricing Grid (Vertical cards stack nicely on mobile, 3-cols on desktop) */
+    /* Shiny Pricing Grid */
     .pricing-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -222,11 +239,13 @@
     .pricing-card:hover {
       border-color: var(--border-glow);
       transform: translateY(-4px);
+      box-shadow: 0 20px 40px -10px rgba(59, 130, 246, 0.25);
     }
 
     .pricing-card.featured {
       border: 2px solid var(--primary);
       background: rgba(30, 41, 59, 0.85);
+      box-shadow: 0 0 35px rgba(59, 130, 246, 0.2);
     }
 
     .popular-tag {
@@ -237,12 +256,13 @@
       color: #fff;
       font-size: 0.75rem;
       font-weight: 700;
-      padding: 4px 12px;
+      padding: 4px 14px;
       border-radius: 20px;
       text-transform: uppercase;
+      letter-spacing: 0.05em;
     }
 
-    /* Buttons */
+    /* Glowing Buttons */
     .btn-glow {
       background: var(--accent-gradient);
       color: #fff;
@@ -252,7 +272,7 @@
       padding: 14px 28px;
       font-size: 1rem;
       cursor: pointer;
-      box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+      box-shadow: 0 10px 25px rgba(59, 130, 246, 0.35);
       transition: all 0.25s ease;
       text-decoration: none;
       display: inline-block;
@@ -261,7 +281,7 @@
 
     .btn-glow:hover {
       transform: translateY(-2px);
-      box-shadow: 0 15px 35px rgba(139, 92, 246, 0.4);
+      box-shadow: 0 15px 35px rgba(139, 92, 246, 0.45);
     }
 
     .btn-paypal {
@@ -281,13 +301,13 @@
 
     .btn-paypal:hover {
       transform: translateY(-2px);
-      box-shadow: 0 15px 35px rgba(0, 121, 193, 0.5);
+      box-shadow: 0 15px 35px rgba(0, 121, 193, 0.55);
     }
 
     /* Section Titles */
     .section-header {
       text-align: center;
-      max-width: 600px;
+      max-width: 650px;
       margin: 0 auto 3rem auto;
     }
 
@@ -314,11 +334,12 @@
       border: 1px solid var(--border-glass);
       border-radius: 24px;
       padding: 2.5rem;
-      transition: border-color 0.3s ease;
+      transition: all 0.3s ease;
     }
 
     .portfolio-row:hover {
       border-color: var(--border-glow);
+      box-shadow: 0 20px 40px -10px rgba(59, 130, 246, 0.15);
     }
 
     .portfolio-info h3 {
@@ -330,13 +351,32 @@
 
     .portfolio-preview {
       background: rgba(15, 23, 42, 0.9);
-      border-radius: 16px;
-      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
       height: 220px;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 3.5rem;
+      box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Global Trust Features */
+    .trust-badge-row {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .trust-pill {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 8px 16px;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
     }
 
     /* Footer */
@@ -379,28 +419,52 @@
 <main class="container vertical-wrapper">
 
   <!-- 1. Hero Section -->
-  <section id="about" class="hero-vertical">
+  <section id="hero" class="hero-vertical">
     <div class="badge-glow">
-      <span>✦ Professional Web Design &amp; Development</span>
+      <span>🌐 Custom Web Design for Global Clients</span>
     </div>
     <h1 class="hero-title">
-      Custom Websites Built for <br />
-      <span class="gradient-text">Every Business.</span>
+      Turning Your Vision Into <br />
+      <span class="gradient-text">A Powerful Website.</span>
     </h1>
     <p class="lead">
-      NovaSphere System LLC crafts ultra-fast, modern, conversion-focused websites designed to showcase your brand, build instant trust, and attract local and global clients.
+      NovaSphere System LLC crafts ultra-fast, modern, conversion-focused websites designed to build instant credibility and turn visitors into paying clients worldwide.
     </p>
     <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
       <a class="btn-glow" href="#work">View My Work ↓</a>
-      <a class="btn-glow" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);" href="#pricing">View Beginner Packages</a>
+      <a class="btn-glow" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);" href="#pricing">View Transparent Pricing</a>
+    </div>
+
+    <div class="trust-badge-row">
+      <span class="trust-pill">⚡ Fast 5–7 Day Turnaround</span>
+      <span class="trust-pill">🌍 Worldwide Client Support</span>
+      <span class="trust-pill">🔒 Secure PayPal Checkout</span>
     </div>
   </section>
 
-  <!-- 2. Portfolio Showcase Section (Vertical Stack) -->
+  <!-- 2. Personal Story & Founder Bio -->
+  <section id="about">
+    <div class="card-luxury" style="max-width: 850px; margin: 0 auto; text-align: center;">
+      <span style="color: var(--primary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.8rem;">Meet the Founder</span>
+      <h2 style="font-size: 2.25rem; margin-top: 0.5rem; margin-bottom: 1.5rem;">Designing Your Vision, Building Our Success</h2>
+      
+      <p style="color: var(--text-muted); line-height: 1.8; font-size: 1.05rem; margin-bottom: 1.5rem;">
+        Hi, I’m <strong>Ruaasaad Altameemi</strong>. I earned my Bachelor's degree in Computer Engineering from California State University, Sacramento. My passion lies in taking technical precision and combining it with beautiful visual design.
+      </p>
+      
+      <p style="color: var(--text-muted); line-height: 1.8; font-size: 1.05rem; margin-bottom: 2rem;">
+        I founded NovaSphere System LLC to help businesses around the world succeed online. I listen to your ideas and draw out your dreams to develop a high-performing digital home for your brand—so we can grow and achieve success together.
+      </p>
+
+      <a class="btn-glow" href="#pricing">Explore Web Packages →</a>
+    </div>
+  </section>
+
+  <!-- 3. Portfolio Showcase Section (Vertical Stack) -->
   <section id="work">
     <div class="section-header">
       <span style="color: var(--primary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.8rem;">Portfolio Showcase</span>
-      <h2>Featured Web Design Projects</h2>
+      <h2>Featured Web Design Services</h2>
       <p style="color: var(--text-muted);">A vertical showcase highlighting clean code, fast performance, and professional aesthetics.</p>
     </div>
 
@@ -409,8 +473,8 @@
       <div class="portfolio-row">
         <div class="portfolio-info">
           <span style="color: #60a5fa; font-size: 0.85rem; font-weight: 600;">Small Business Websites</span>
-          <h3>Local Business Web Presence</h3>
-          <p style="color: var(--text-muted); line-height: 1.6;">Clean, mobile-responsive websites built for local shops, service providers, and professionals looking to establish immediate online credibility.</p>
+          <h3>Local &amp; Global Business Sites</h3>
+          <p style="color: var(--text-muted); line-height: 1.6;">Clean, mobile-responsive websites built for service providers, shops, and entrepreneurs looking to establish immediate online credibility.</p>
         </div>
         <div class="portfolio-preview">🏢</div>
       </div>
@@ -420,7 +484,7 @@
         <div class="portfolio-info">
           <span style="color: #a78bfa; font-size: 0.85rem; font-weight: 600;">Creative Portfolios</span>
           <h3>Visual Portfolios &amp; Showcases</h3>
-          <p style="color: var(--text-muted); line-height: 1.6;">Sleek, image-forward layouts tailored to highlight creative work, photography, or personal portfolios with immaculate style.</p>
+          <p style="color: var(--text-muted); line-height: 1.6;">Sleek, visual-first layouts tailored to highlight creative work, photography, or personal portfolios with immaculate dark-glass elegance.</p>
         </div>
         <div class="portfolio-preview">✨</div>
       </div>
@@ -430,19 +494,19 @@
         <div class="portfolio-info">
           <span style="color: #f472b6; font-size: 0.85rem; font-weight: 600;">Landing Pages</span>
           <h3>High-Converting Lead Pages</h3>
-          <p style="color: var(--text-muted); line-height: 1.6;">Focused single-page designs engineered to capture customer inquiries, featuring fast load times and clean contact integration.</p>
+          <p style="color: var(--text-muted); line-height: 1.6;">Focused single-page designs engineered to capture customer inquiries, featuring fast load times and clean contact forms.</p>
         </div>
         <div class="portfolio-preview">🚀</div>
       </div>
     </div>
   </section>
 
-  <!-- 3. Beginner Tiered Pricing & PayPal Checkout -->
+  <!-- 4. Beginner Tiered Pricing & PayPal Checkout -->
   <section id="pricing">
     <div class="section-header">
-      <span style="color: var(--primary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.8rem;">Transparent Pricing</span>
-      <h2>Beginner Packages &amp; Checkout</h2>
-      <p style="color: var(--text-muted);">Choose a beginner-friendly package below or pay a custom invoice amount securely via PayPal.</p>
+      <span style="color: var(--primary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.8rem;">Simple &amp; Transparent</span>
+      <h2>Web Design Packages &amp; Checkout</h2>
+      <p style="color: var(--text-muted);">Choose a package below or pay a custom project invoice securely via PayPal.</p>
     </div>
 
     <div class="pricing-grid">
@@ -450,8 +514,8 @@
       <div class="pricing-card">
         <div>
           <h3>Starter Landing Page</h3>
-          <p style="font-size: 2rem; font-weight: 800; color: #fff; margin: 1rem 0;">$300 <span style="font-size: 0.85rem; font-weight: 400; color: var(--text-muted);">USD</span></p>
-          <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; margin-bottom: 2rem;">Perfect for new businesses needing a fast, mobile-friendly 1-page landing site and contact form.</p>
+          <p style="font-size: 2.25rem; font-weight: 800; color: #fff; margin: 1rem 0;">$300 <span style="font-size: 0.85rem; font-weight: 400; color: var(--text-muted);">USD</span></p>
+          <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; margin-bottom: 2rem;">Perfect for new businesses needing a fast, mobile-friendly 1-page landing site and inquiry form.</p>
         </div>
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
           <input type="hidden" name="cmd" value="_xclick" />
@@ -459,4 +523,67 @@
           <input type="hidden" name="item_name" value="NovaSphere System — Starter Landing Page ($300)" />
           <input type="hidden" name="amount" value="300.00" />
           <input type="hidden" name="currency_code" value="USD" />
-          <button type="submit" class="btn-paypal">Pay $300 via
+          <button type="submit" class="btn-paypal">Pay $300 via PayPal →</button>
+        </form>
+      </div>
+
+      <!-- Professional Tier ($600) - Featured -->
+      <div class="pricing-card featured">
+        <span class="popular-tag">Most Popular</span>
+        <div>
+          <h3>Professional Business Site</h3>
+          <p style="font-size: 2.25rem; font-weight: 800; color: #fff; margin: 1rem 0;">$600 <span style="font-size: 0.85rem; font-weight: 400; color: var(--text-muted);">USD</span></p>
+          <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; margin-bottom: 2rem;">A multi-page website (Home, About, Services, Work, Contact) designed to showcase your business completely.</p>
+        </div>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+          <input type="hidden" name="cmd" value="_xclick" />
+          <input type="hidden" name="business" value="Ruaasaad70@yahoo.com" />
+          <input type="hidden" name="item_name" value="NovaSphere System — Professional Package ($600)" />
+          <input type="hidden" name="amount" value="600.00" />
+          <input type="hidden" name="currency_code" value="USD" />
+          <button type="submit" class="btn-paypal">Pay $600 via PayPal →</button>
+        </form>
+      </div>
+
+      <!-- Custom / Flexible Tier -->
+      <div class="pricing-card">
+        <div>
+          <h3>Custom Invoice / Deposit</h3>
+          <p style="font-size: 2.25rem; font-weight: 800; color: #fff; margin: 1rem 0;">Any Amount</p>
+          <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; margin-bottom: 2rem;">Enter your agreed custom quote or milestone deposit directly on PayPal's secure checkout page.</p>
+        </div>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+          <input type="hidden" name="cmd" value="_xclick" />
+          <input type="hidden" name="business" value="Ruaasaad70@yahoo.com" />
+          <input type="hidden" name="item_name" value="NovaSphere System — Custom Project Payment" />
+          <input type="hidden" name="currency_code" value="USD" />
+          <button type="submit" class="btn-paypal" style="background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);">Pay Custom Amount →</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Contact Section -->
+  <section id="contact">
+    <div class="card-luxury" style="max-width: 750px; margin: 0 auto; text-align: center;">
+      <h2>Let's Build Your Digital Presence</h2>
+      <p style="color: var(--text-muted); margin-bottom: 2rem;">Ready to take your business to the next level with a custom website? Send me an email to start today.</p>
+      <a class="btn-glow" href="mailto:Ruaasaad70@yahoo.com">Email Me Directly →</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    © <span id="year"></span> <strong>NovaSphere System LLC</strong>. All rights reserved.
+  </div>
+</footer>
+
+<script>
+  // Dynamic Copyright Year
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
