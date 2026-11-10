@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>NovaSphere Systems — Web • Dashboards • Automation</title>
+  <title>NovaSphere System — Web • Dashboards • Automation</title>
   <meta name="description" content="Fast, conversion-focused websites, analytics dashboards, and custom Python automation for growing businesses." />
   
   <!-- Favicon -->
@@ -14,29 +14,67 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=3" />
 
-  <!-- Embedded Enhancements (Can also be pasted directly into style.css) -->
- <!-- Embedded Enhancements (Gray / Slate Theme) -->
-  <!-- Modern Tech Blue Theme -->
+  <!-- Embedded Enhancements (Elegant Executive Blue Theme) -->
   <style>
     :root {
-      --primary: #2563eb;
+      --primary: #1e40af;
       --primary-hover: #1d4ed8;
-      --accent-gradient: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
-      --bg-glass: rgba(255, 255, 255, 0.85);
-      --card-shadow: 0 10px 30px -10px rgba(37, 99, 235, 0.12);
-      --card-hover-shadow: 0 20px 40px -15px rgba(37, 99, 235, 0.25);
+      --accent-blue: #2563eb;
+      --accent-gradient: linear-gradient(135deg, #0f172a 0%, #1e40af 50%, #2563eb 100%);
+      --paypal-gradient: linear-gradient(135deg, #003087 0%, #0079C1 100%);
+      --bg-glass: rgba(255, 255, 255, 0.88);
+      --card-border: rgba(226, 232, 240, 0.9);
+      --card-shadow: 0 12px 32px -8px rgba(15, 23, 42, 0.06);
+      --card-hover-shadow: 0 20px 40px -12px rgba(37, 99, 235, 0.18);
     }
 
-    body { font-family: 'Inter', sans-serif; }
-    h1, h2, h3, .brand-name { font-family: 'Plus Jakarta Sans', sans-serif; }
+    body { 
+      font-family: 'Inter', sans-serif;
+      color: #0f172a;
+      background: 
+        radial-gradient(1000px 500px at 85% -10%, #eff6ff 0%, transparent 60%),
+        radial-gradient(600px 400px at -5% 30%, #f8fafc 0%, transparent 50%),
+        #ffffff;
+    }
+
+    h1, h2, h3, .brand-title { 
+      font-family: 'Plus Jakarta Sans', sans-serif; 
+      letter-spacing: -0.02em;
+    }
+
+    /* Brand Header Alignment */
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .brand-title {
+      font-weight: 800;
+      font-size: 1.2rem;
+      line-height: 1.1;
+      color: #0f172a;
+    }
+
+    .brand-tagline {
+      font-weight: 600;
+      font-size: 11px;
+      color: #64748b;
+      margin-top: 2px;
+    }
 
     .hero-title {
-      font-size: 2.75rem;
+      font-size: clamp(2.5rem, 5vw, 3.25rem);
       font-weight: 800;
-      line-height: 1.15;
-      letter-spacing: -0.02em;
+      line-height: 1.12;
     }
 
     .gradient-text {
@@ -52,19 +90,19 @@
       padding: 6px 14px;
       border-radius: 50px;
       background: rgba(37, 99, 235, 0.08);
-      color: var(--primary);
+      color: var(--accent-blue);
       font-weight: 600;
       font-size: 0.85rem;
-      border: 1px solid rgba(37, 99, 235, 0.2);
+      border: 1px solid rgba(37, 99, 235, 0.18);
       margin-bottom: 1rem;
     }
 
     .card-modern {
       background: var(--bg-glass);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(226, 232, 240, 0.8);
-      border-radius: 16px;
-      padding: 1.75rem;
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 2rem;
       box-shadow: var(--card-shadow);
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
@@ -79,13 +117,47 @@
       background: var(--accent-gradient) !important;
       color: #fff !important;
       border: none !important;
-      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+      font-weight: 600;
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.25);
       transition: transform 0.2s ease, box-shadow 0.2s ease !important;
     }
 
     .btn-glow:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.5);
+      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+    }
+
+    .btn-paypal {
+      background: var(--paypal-gradient) !important;
+      color: #fff !important;
+      border: none !important;
+      font-weight: 600;
+      box-shadow: 0 4px 14px rgba(0, 48, 135, 0.3);
+      transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+    }
+
+    .btn-paypal:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 121, 193, 0.4);
+    }
+
+    .trust-metrics {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 2rem;
+      padding-top: 1.75rem;
+      border-top: 1px solid rgba(226, 232, 240, 0.9);
+    }
+
+    .metric-item strong {
+      display: block;
+      font-size: 1.15rem;
+      color: #0f172a;
+    }
+
+    .metric-item span {
+      font-size: 0.825rem;
+      color: #64748b;
     }
   </style>
 </head>
@@ -96,8 +168,8 @@
     <div class="brand">
       <img src="images/logo.png" alt="NovaSphere Logo" class="logo-img" />
       <div class="brand-text">
-        <span class="brand-name">NovaSphere System</span>
-        <small class="brand-tagline">Web • Dashboards • Automation</small>
+        <span class="brand-title">NovaSphere System</span>
+        <span class="brand-tagline">Web • Dashboards • Automation</span>
       </div>
     </div>
     <nav class="links">
@@ -164,28 +236,40 @@
     </div>
   </section>
 
-  <!-- Value Proposition Section -->
+  <!-- Value Proposition & Service Packages -->
   <section class="container" style="padding-top: 4rem; padding-bottom: 4rem;">
     <div style="text-align: center; max-width: 650px; margin: 0 auto 2.5rem auto;">
-      <span class="badge-glow">Why Partner With Us</span>
-      <h2>Everything Your Business Needs to Grow Online</h2>
+      <span class="badge-glow">Featured Packages</span>
+      <h2>Turnkey Solutions Built for Growth</h2>
+      <p class="muted">Select a package to launch your web presence or secure direct payment via PayPal.</p>
     </div>
 
     <div class="grid cols-3 spaced">
+      <!-- Card 1 -->
       <div class="card card-modern">
         <div style="font-size: 1.75rem; margin-bottom: 0.5rem;">🚀</div>
         <h3>Rapid Execution</h3>
         <p class="muted">Go live in days, not months. We follow structured sprints to launch your project on time with zero fluff.</p>
       </div>
+
+      <!-- Card 2 -->
       <div class="card card-modern">
         <div style="font-size: 1.75rem; margin-bottom: 0.5rem;">🎯</div>
         <h3>Conversion Focused</h3>
         <p class="muted">Pretty isn't enough. We build layout pathways, analytics tracking, and forms designed to generate real business leads.</p>
       </div>
-      <div class="card card-modern">
-        <div style="font-size: 1.75rem; margin-bottom: 0.5rem;">⚙️</div>
-        <h3>Custom Automation</h3>
-        <p class="muted">Automate repetitive operational tasks with custom Python scripts, data pipelines, and interactive dashboards.</p>
+
+      <!-- Card 3: Direct PayPal Payment -->
+      <div class="card card-modern" style="border: 2px solid rgba(37, 99, 235, 0.3);">
+        <div style="font-size: 1.75rem; margin-bottom: 0.5rem;">💳</div>
+        <h3>Direct Project Retainer</h3>
+        <p class="muted">Secure payment for customized web design, dashboard projects, or Python automation services via PayPal.</p>
+        
+        <div style="margin-top: 1.25rem;">
+          <a class="btn btn-paypal" href="https://www.paypal.com/paypalme/Ruaasaad70" target="_blank" rel="noopener noreferrer" style="width: 100%;">
+            Pay via PayPal →
+          </a>
+        </div>
       </div>
     </div>
     
@@ -208,7 +292,9 @@
   // Mobile Menu Toggle
   const menuBtn = document.getElementById('menuBtn');
   const mobileMenu = document.getElementById('mobileMenu');
-  menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+  }
 
   // Dynamic Copyright Year
   document.getElementById('year').textContent = new Date().getFullYear();
@@ -236,10 +322,12 @@
 
   const briefForm = document.getElementById('briefForm');
   const briefStatus = document.getElementById('briefStatus');
-  briefForm.addEventListener('submit', e => { 
-    e.preventDefault(); 
-    sendWithFormspree(briefForm, briefStatus); 
-  });
+  if (briefForm) {
+    briefForm.addEventListener('submit', e => { 
+      e.preventDefault(); 
+      sendWithFormspree(briefForm, briefStatus); 
+    });
+  }
 </script>
 
 </body>
