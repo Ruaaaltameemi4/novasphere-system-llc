@@ -14,65 +14,66 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   
-  <link rel="stylesheet" href="style.css?v=3" />
+  <link rel="stylesheet" href="style.css?v=4" />
 
-  <!-- Embedded Enhancements (Elegant Executive Blue Theme) -->
+  <!-- Embedded Modern Theme Extensions -->
   <style>
     :root {
-      --primary: #1e40af;
+      --primary: #2563eb;
       --primary-hover: #1d4ed8;
-      --accent-blue: #2563eb;
-      --accent-gradient: linear-gradient(135deg, #0f172a 0%, #1e40af 50%, #2563eb 100%);
-      --paypal-gradient: linear-gradient(135deg, #003087 0%, #0079C1 100%);
-      --bg-glass: rgba(255, 255, 255, 0.88);
-      --card-border: rgba(226, 232, 240, 0.9);
-      --card-shadow: 0 12px 32px -8px rgba(15, 23, 42, 0.06);
-      --card-hover-shadow: 0 20px 40px -12px rgba(37, 99, 235, 0.18);
+      --navy-deep: #0f172a;
+      --accent-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #2563eb 100%);
+      --paypal-gradient: linear-gradient(135deg, #003087 0%, #0079c1 100%);
+      --bg-glass: rgba(255, 255, 255, 0.75);
+      --card-border: rgba(226, 232, 240, 0.8);
+      --card-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.07);
+      --card-hover-shadow: 0 25px 50px -12px rgba(37, 99, 235, 0.22);
     }
 
     body { 
       font-family: 'Inter', sans-serif;
       color: #0f172a;
       background: 
-        radial-gradient(1000px 500px at 85% -10%, #eff6ff 0%, transparent 60%),
-        radial-gradient(600px 400px at -5% 30%, #f8fafc 0%, transparent 50%),
-        #ffffff;
+        radial-gradient(1200px 600px at 80% -10%, rgba(37, 99, 235, 0.08) 0%, transparent 60%),
+        radial-gradient(800px 500px at -10% 40%, rgba(99, 102, 241, 0.05) 0%, transparent 50%),
+        #f8fafc;
     }
 
     h1, h2, h3, .brand-title { 
       font-family: 'Plus Jakarta Sans', sans-serif; 
-      letter-spacing: -0.02em;
+      letter-spacing: -0.025em;
     }
 
-    /* Brand Header Alignment */
+    /* Modern Brand Header */
     .brand {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
     }
 
     .brand-text {
       display: flex;
       flex-direction: column;
-      justify-content: center;
     }
 
     .brand-title {
       font-weight: 800;
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       line-height: 1.1;
-      color: #0f172a;
+      color: var(--navy-deep);
     }
 
     .brand-tagline {
       font-weight: 600;
-      font-size: 11px;
+      font-size: 0.725rem;
       color: #64748b;
-      margin-top: 2px;
+      margin-top: 3px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
     }
 
     .hero-title {
-      font-size: clamp(2.5rem, 5vw, 3.25rem);
+      font-size: clamp(2.5rem, 5vw, 3.4rem);
       font-weight: 800;
       line-height: 1.12;
     }
@@ -86,31 +87,53 @@
     .badge-glow {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      padding: 6px 14px;
+      gap: 8px;
+      padding: 6px 16px;
       border-radius: 50px;
-      background: rgba(37, 99, 235, 0.08);
-      color: var(--accent-blue);
+      background: rgba(37, 99, 235, 0.07);
+      color: var(--primary);
       font-weight: 600;
       font-size: 0.85rem;
-      border: 1px solid rgba(37, 99, 235, 0.18);
-      margin-bottom: 1rem;
+      border: 1px solid rgba(37, 99, 235, 0.2);
+      box-shadow: 0 2px 10px rgba(37, 99, 235, 0.05);
+      margin-bottom: 1.25rem;
     }
 
     .card-modern {
       background: var(--bg-glass);
       backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
       border: 1px solid var(--card-border);
-      border-radius: 20px;
-      padding: 2rem;
+      border-radius: 24px;
+      padding: 2.25rem;
       box-shadow: var(--card-shadow);
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
     }
 
     .card-modern:hover {
-      transform: translateY(-4px);
+      transform: translateY(-6px);
       box-shadow: var(--card-hover-shadow);
-      border-color: rgba(37, 99, 235, 0.3);
+      border-color: rgba(37, 99, 235, 0.35);
+    }
+
+    .card-featured {
+      border: 2px solid rgba(37, 99, 235, 0.4);
+      background: rgba(255, 255, 255, 0.92);
+    }
+
+    .popular-badge {
+      position: absolute;
+      top: -14px;
+      right: 24px;
+      background: var(--accent-gradient);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 14px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
     }
 
     .btn-glow {
@@ -118,13 +141,15 @@
       color: #fff !important;
       border: none !important;
       font-weight: 600;
-      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.25);
-      transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+      border-radius: 12px;
+      padding: 12px 24px;
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.25);
+      transition: all 0.25s ease !important;
     }
 
     .btn-glow:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+      box-shadow: 0 8px 24px rgba(37, 99, 235, 0.4);
     }
 
     .btn-paypal {
@@ -132,27 +157,30 @@
       color: #fff !important;
       border: none !important;
       font-weight: 600;
-      box-shadow: 0 4px 14px rgba(0, 48, 135, 0.3);
-      transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+      border-radius: 12px;
+      padding: 12px 20px;
+      box-shadow: 0 4px 14px rgba(0, 48, 135, 0.25);
+      transition: all 0.25s ease !important;
     }
 
     .btn-paypal:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0, 121, 193, 0.4);
+      box-shadow: 0 8px 22px rgba(0, 121, 193, 0.38);
     }
 
     .trust-metrics {
       display: flex;
-      gap: 1.5rem;
-      margin-top: 2rem;
-      padding-top: 1.75rem;
-      border-top: 1px solid rgba(226, 232, 240, 0.9);
+      gap: 2rem;
+      margin-top: 2.25rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(226, 232, 240, 0.8);
     }
 
     .metric-item strong {
       display: block;
-      font-size: 1.15rem;
-      color: #0f172a;
+      font-size: 1.2rem;
+      color: var(--navy-deep);
+      font-weight: 800;
     }
 
     .metric-item span {
@@ -190,7 +218,7 @@
       </div>
       <h1 class="hero-title">
         Build Faster. Scale Smarter. <br />
-        <span class="gradient-text">custom data dashboards </span>
+        <span class="gradient-text">Custom Data Dashboards & Web</span>
       </h1>
       <p class="lead">
         We craft lightning-fast websites, custom analytics dashboards, and seamless Python automations engineered to turn site visitors into repeat revenue.
@@ -217,9 +245,10 @@
       </div>
     </div>
 
+    <!-- Quick Inquiry Form -->
     <div class="card card-modern">
-      <h3 style="margin-top:0">Ready to Get Started?</h3>
-      <p class="muted" style="margin-top:-8px; margin-bottom: 1rem; font-size: 0.9rem;">Submit a quick brief for a free timeline &amp; quote estimate.</p>
+      <h3 style="margin-top:0; font-size: 1.5rem;">Ready to Get Started?</h3>
+      <p class="muted" style="margin-top:-6px; margin-bottom: 1.25rem; font-size: 0.9rem;">Submit a quick brief for a free timeline &amp; quote estimate.</p>
       
       <form id="briefForm" class="stack" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
         <input class="input" name="name" placeholder="Your Full Name" required />
@@ -230,38 +259,29 @@
         <input type="hidden" name="_subject" value="New Inquiry — NovaSphere Systems LLC" />
         <input type="hidden" name="_format" value="json" />
         
-        <button class="btn btn-glow primary" type="submit">Submit Brief &amp; Get Estimate</button>
-        <p id="briefStatus" class="muted" aria-live="polite"></p>
+        <button class="btn btn-glow primary" type="submit" style="width:100%;">Submit Brief &amp; Get Estimate</button>
+        <p id="briefStatus" class="muted" aria-live="polite" style="margin-top: 0.5rem; font-size: 0.85rem;"></p>
       </form>
     </div>
   </section>
 
-  <!-- Value Proposition & Service Packages -->
-  <section class="container" style="padding-top: 4rem; padding-bottom: 4rem;">
-    <div style="text-align: center; max-width: 650px; margin: 0 auto 2.5rem auto;">
-      <span class="badge-glow">Featured Packages</span>
+  <!-- Service Packages & Direct PayPal Payments -->
+  <section class="container" style="padding-top: 5rem; padding-bottom: 5rem;">
+    <div style="text-align: center; max-width: 650px; margin: 0 auto 3rem auto;">
+      <span class="badge-glow">Transparent Pricing</span>
       <h2>Turnkey Solutions Built for Growth</h2>
-      <p class="muted">Select a package to launch your web presence or secure direct payment via PayPal.</p>
+      <p class="muted">Select a tier to launch your digital project or complete instant checkout via PayPal.</p>
     </div>
 
     <div class="grid cols-3 spaced">
-      <!-- Card 1 -->
-      <div class="card card-modern">
-        <div style="font-size: 1.75rem; margin-bottom: 0.5rem;">🚀</div>
-        <h3>Rapid Execution</h3>
-        <p class="muted">Go live in days, not months. We follow structured sprints to launch your project on time with zero fluff.</p>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="grid cols-3 spaced">
       <!-- Starter Package ($600) -->
       <div class="card card-modern">
-        <div style="font-size: 1.75rem; margin-bottom: 0.5rem;">🚀</div>
+        <div style="font-size: 2rem; margin-bottom: 0.75rem;">🚀</div>
         <h3>Starter Tier</h3>
-        <p class="price" style="font-size: 1.75rem; font-weight: 800; color: #0f172a; margin: 0.5rem 0;">$600.00 <span style="font-size: 0.9rem; font-weight: 500; color: #64748b;">USD</span></p>
-        <p class="muted" style="font-size: 0.875rem; min-height: 48px;">Essential single-page website, landing page optimization, or simple Python script automation.</p>
+        <p class="price" style="font-size: 2rem; font-weight: 800; color: #0f172a; margin: 0.5rem 0;">$600.00 <span style="font-size: 0.9rem; font-weight: 500; color: #64748b;">USD</span></p>
+        <p class="muted" style="font-size: 0.875rem; min-height: 52px; line-height: 1.5;">Essential single-page website, landing page optimization, or targeted Python script automation.</p>
         
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="margin-top: 1.25rem;">
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="margin-top: 1.5rem;">
           <input type="hidden" name="cmd" value="_xclick" />
           <input type="hidden" name="business" value="Ruaasaad70@yahoo.com" />
           <input type="hidden" name="item_name" value="NovaSphere System — Starter Package ($600)" />
@@ -273,107 +293,3 @@
           </button>
         </form>
       </div>
-
-      <!-- Professional Package ($1,200) -->
-      <div class="card card-modern" style="border: 2px solid rgba(37, 99, 235, 0.3);">
-        <div style="font-size: 1.75rem; margin-bottom: 0.5rem;">🎯</div>
-        <h3>Professional Tier</h3>
-        <p class="price" style="font-size: 1.75rem; font-weight: 800; color: #0f172a; margin: 0.5rem 0;">$1,200.00 <span style="font-size: 0.9rem; font-weight: 500; color: #64748b;">USD</span></p>
-        <p class="muted" style="font-size: 0.875rem; min-height: 48px;">Multi-page web design, custom analytics dashboards, or full workflow automations.</p>
-        
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="margin-top: 1.25rem;">
-          <input type="hidden" name="cmd" value="_xclick" />
-          <input type="hidden" name="business" value="Ruaasaad70@yahoo.com" />
-          <input type="hidden" name="item_name" value="NovaSphere System — Professional Package ($1,200)" />
-          <input type="hidden" name="amount" value="1200.00" />
-          <input type="hidden" name="currency_code" value="USD" />
-          
-          <button type="submit" class="btn btn-paypal" style="width: 100%; cursor: pointer;">
-            Pay $1,200 via PayPal →
-          </button>
-        </form>
-      </div>
-
-      <!-- Enterprise Package ($1,800) -->
-      <div class="card card-modern">
-        <div style="font-size: 1.75rem; margin-bottom: 0.5rem;">⚙️</div>
-        <h3>Enterprise Tier</h3>
-        <p class="price" style="font-size: 1.75rem; font-weight: 800; color: #0f172a; margin: 0.5rem 0;">$1,800.00 <span style="font-size: 0.9rem; font-weight: 500; color: #64748b;">USD</span></p>
-        <p class="muted" style="font-size: 0.875rem; min-height: 48px;">Complete web platform, advanced data pipeline integration, and priority ongoing support.</p>
-        
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="margin-top: 1.25rem;">
-          <input type="hidden" name="cmd" value="_xclick" />
-          <input type="hidden" name="business" value="Ruaasaad70@yahoo.com" />
-          <input type="hidden" name="item_name" value="NovaSphere System — Enterprise Package ($1,800)" />
-          <input type="hidden" name="amount" value="1800.00" />
-          <input type="hidden" name="currency_code" value="USD" />
-          
-          <button type="submit" class="btn btn-paypal" style="width: 100%; cursor: pointer;">
-            Pay $1,800 via PayPal →
-          </button>
-        </form>
-      </div>
-    </div>
-    
-    <div class="center spaced" style="margin-top: 2.5rem;">
-      <a class="btn" href="services.html">View Our Full Suite of Services →</a>
-    </div>
-  </section>
-</main>
-
-<footer class="footer-gradient">
-  <div class="container footer-wrap">
-    <img src="images/logo.png" alt="NovaSphere Logo" class="footer-logo" />
-    <div class="footer-text">
-      © <span id="year"></span> <strong>NovaSphere Systems LLC</strong> • <a href="#" class="footer-link">Privacy Policy</a>
-    </div>
-  </div>
-</footer>
-
-<script>
-  // Mobile Menu Toggle
-  const menuBtn = document.getElementById('menuBtn');
-  const mobileMenu = document.getElementById('mobileMenu');
-  if (menuBtn && mobileMenu) {
-    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('open'));
-  }
-
-  // Dynamic Copyright Year
-  document.getElementById('year').textContent = new Date().getFullYear();
-
-  // Async Formspree Submission
-  async function sendWithFormspree(formEl, statusEl) {
-    statusEl.textContent = 'Submitting project brief...';
-    try {
-      const res = await fetch(formEl.action, { 
-        method: 'POST', 
-        body: new FormData(formEl), 
-        headers: { 'Accept': 'application/json' } 
-      });
-      if (res.ok) { 
-        formEl.reset(); 
-        statusEl.textContent = '🎉 Thank you! We have received your brief and will reply shortly.'; 
-      } else { 
-        const data = await res.json().catch(() => ({}));
-        statusEl.textContent = data.error || 'Submission error. Please try again.'; 
-      }
-
-
-  
-    } catch (err) { 
-      statusEl.textContent = 'Network error. Please try again.'; 
-    }
-  }
-
-  const briefForm = document.getElementById('briefForm');
-  const briefStatus = document.getElementById('briefStatus');
-  if (briefForm) {
-    briefForm.addEventListener('submit', e => { 
-      e.preventDefault(); 
-      sendWithFormspree(briefForm, briefStatus); 
-    });
-  }
-</script>
-
-</body>
-</html>
