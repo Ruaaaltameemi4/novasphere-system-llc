@@ -265,31 +265,26 @@
     </div>
   </section>
 
-  <!-- Service Packages & Direct PayPal Payments -->
-  <section class="container" style="padding-top: 5rem; padding-bottom: 5rem;">
-    <div style="text-align: center; max-width: 650px; margin: 0 auto 3rem auto;">
-      <span class="badge-glow">Transparent Pricing</span>
-      <h2>Turnkey Solutions Built for Growth</h2>
-      <p class="muted">Select a tier to launch your digital project or complete instant checkout via PayPal.</p>
-    </div>
+ <!-- Custom Amount PayPal Card -->
+<div class="card card-modern" style="border: 2px solid rgba(37, 99, 235, 0.4);">
+  <div style="font-size: 2rem; margin-bottom: 0.75rem;">💳</div>
+  <h3>Custom Invoice / Retainer</h3>
+  <p class="muted" style="font-size: 0.875rem; margin-bottom: 1rem;">Enter the custom quote or invoice amount agreed upon for your project.</p>
 
-    <div class="grid cols-3 spaced">
-      <!-- Starter Package ($600) -->
-      <div class="card card-modern">
-        <div style="font-size: 2rem; margin-bottom: 0.75rem;">🚀</div>
-        <h3>Starter Tier</h3>
-        <p class="price" style="font-size: 2rem; font-weight: 800; color: #0f172a; margin: 0.5rem 0;">$600.00 <span style="font-size: 0.9rem; font-weight: 500; color: #64748b;">USD</span></p>
-        <p class="muted" style="font-size: 0.875rem; min-height: 52px; line-height: 1.5;">Essential single-page website, landing page optimization, or targeted Python script automation.</p>
-        
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="margin-top: 1.5rem;">
-          <input type="hidden" name="cmd" value="_xclick" />
-          <input type="hidden" name="business" value="Ruaasaad70@yahoo.com" />
-          <input type="hidden" name="item_name" value="NovaSphere System — Starter Package ($600)" />
-          <input type="hidden" name="amount" value="600.00" />
-          <input type="hidden" name="currency_code" value="USD" />
-          
-          <button type="submit" class="btn btn-paypal" style="width: 100%; cursor: pointer;">
-            Pay $600 via PayPal →
-          </button>
-        </form>
-      </div>
+  <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+    <input type="hidden" name="cmd" value="_xclick" />
+    <input type="hidden" name="business" value="Ruaasaad70@yahoo.com" />
+    <input type="hidden" name="item_name" value="NovaSphere System — Custom Payment" />
+    <input type="hidden" name="currency_code" value="USD" />
+
+    <!-- Custom Dollar Input -->
+    <div style="margin-bottom: 1.25rem;">
+      <label style="display: block; font-size: 0.8rem; font-weight: 600; color: #64748b; margin-bottom: 4px;">Enter Amount ($ USD)</label>
+      <input type="number" name="amount" min="1" step="any" placeholder="e.g. 500" required class="input" style="width: 100%; font-size: 1.1rem; font-weight: 700;" />
+    </div>
+    
+    <button type="submit" class="btn btn-paypal" style="width: 100%; cursor: pointer;">
+      Pay Custom Amount via PayPal →
+    </button>
+  </form>
+</div>
