@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>NovaSphere System — Web • Dashboards • Automation</title>
-  <meta name="description" content="Fast, conversion-focused websites, analytics dashboards, and custom Python automation for growing businesses." />
+  <title>NovaSphere System — Custom Web Design Studio</title>
+  <meta name="description" content="High-performance custom web design and development built for global businesses by Ruaa Altameemi." />
   
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="images/logo.png" />
@@ -12,323 +12,228 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   
-  <link rel="stylesheet" href="style.css?v=3" />
-
-  <!-- Embedded Enhancements (Elegant Executive Blue Theme) -->
+  <!-- Embedded Bright Theme Styling & Vibrant Effects -->
   <style>
     :root {
-      --primary: #1e40af;
-      --primary-hover: #1d4ed8;
-      --accent-blue: #2563eb;
-      --accent-gradient: linear-gradient(135deg, #0f172a 0%, #1e40af 50%, #2563eb 100%);
-      --paypal-gradient: linear-gradient(135deg, #003087 0%, #0079C1 100%);
-      --bg-glass: rgba(255, 255, 255, 0.88);
-      --card-border: rgba(226, 232, 240, 0.9);
-      --card-shadow: 0 12px 32px -8px rgba(15, 23, 42, 0.06);
-      --card-hover-shadow: 0 20px 40px -12px rgba(37, 99, 235, 0.18);
+      --bg-base: #f4f7fc;
+      --bg-card: #ffffff;
+      --border-card: rgba(226, 232, 240, 0.9);
+      --border-glow: #2563eb;
+      --primary: #2563eb;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --bright-gradient: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #06b6d4 100%);
+      --paypal-gradient: linear-gradient(135deg, #003087 0%, #0079c1 100%);
+      --shadow-card: 0 10px 30px -5px rgba(37, 99, 235, 0.08);
+      --shadow-hover: 0 20px 40px -10px rgba(37, 99, 235, 0.2);
     }
+
+    * { box-sizing: border-box; }
 
     body { 
       font-family: 'Inter', sans-serif;
-      color: #0f172a;
-      background: 
-        radial-gradient(1000px 500px at 85% -10%, #eff6ff 0%, transparent 60%),
-        radial-gradient(600px 400px at -5% 30%, #f8fafc 0%, transparent 50%),
-        #ffffff;
+      color: var(--text-main);
+      background-color: var(--bg-base);
+      background-image: 
+        radial-gradient(circle at 10% 10%, rgba(37, 99, 235, 0.12) 0%, transparent 45%),
+        radial-gradient(circle at 90% 40%, rgba(6, 182, 212, 0.15) 0%, transparent 45%),
+        radial-gradient(circle at 50% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+        #f4f7fc;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
     }
 
     h1, h2, h3, .brand-title { 
       font-family: 'Plus Jakarta Sans', sans-serif; 
-      letter-spacing: -0.02em;
+      letter-spacing: -0.03em;
     }
 
-    /* Brand Header Alignment */
+    section[id] {
+      scroll-margin-top: 100px;
+    }
+
+    /* Navbar Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+      padding: 1rem 0;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
     .brand {
       display: flex;
       align-items: center;
       gap: 12px;
     }
 
+    .logo-img {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      object-fit: cover;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+    }
+
     .brand-text {
       display: flex;
       flex-direction: column;
-      justify-content: center;
     }
 
     .brand-title {
       font-weight: 800;
       font-size: 1.2rem;
-      line-height: 1.1;
-      color: #0f172a;
+      color: var(--text-main);
     }
 
     .brand-tagline {
+      font-size: 0.675rem;
+      color: var(--text-muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
       font-weight: 600;
-      font-size: 11px;
-      color: #64748b;
-      margin-top: 2px;
     }
 
-    .hero-title {
-      font-size: clamp(2.5rem, 5vw, 3.25rem);
-      font-weight: 800;
-      line-height: 1.12;
+    .links {
+      display: flex;
+      gap: 2rem;
     }
 
-    .gradient-text {
-      background: var(--accent-gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+    .links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.925rem;
+      transition: color 0.2s ease;
+    }
+
+    .links a:hover {
+      color: var(--primary);
+    }
+
+    /* Vertical Stack Wrapper */
+    .vertical-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 5rem;
+      padding: 4rem 0 7rem 0;
+    }
+
+    /* Hero Section */
+    .hero-vertical {
+      text-align: center;
+      max-width: 850px;
+      margin: 0 auto;
     }
 
     .badge-glow {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      padding: 6px 14px;
+      gap: 8px;
+      padding: 8px 22px;
       border-radius: 50px;
       background: rgba(37, 99, 235, 0.08);
-      color: var(--accent-blue);
-      font-weight: 600;
-      font-size: 0.85rem;
-      border: 1px solid rgba(37, 99, 235, 0.18);
-      margin-bottom: 1rem;
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 0.875rem;
+      border: 1px solid rgba(37, 99, 235, 0.25);
+      margin-bottom: 1.5rem;
     }
 
-    .card-modern {
-      background: var(--bg-glass);
-      backdrop-filter: blur(16px);
-      border: 1px solid var(--card-border);
-      border-radius: 20px;
-      padding: 2rem;
-      box-shadow: var(--card-shadow);
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    .hero-title {
+      font-size: clamp(2.75rem, 6vw, 4.25rem);
+      font-weight: 800;
+      line-height: 1.1;
+      color: var(--text-main);
+      margin-bottom: 1.5rem;
     }
 
-    .card-modern:hover {
+    .gradient-text {
+      background: var(--bright-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .lead {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      max-width: 680px;
+      margin: 0 auto 2.5rem auto;
+    }
+
+    /* Bright Cards */
+    .card-bright {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 28px;
+      padding: 3rem;
+      box-shadow: var(--shadow-card);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+    }
+
+    .card-bright:hover {
       transform: translateY(-4px);
-      box-shadow: var(--card-hover-shadow);
+      box-shadow: var(--shadow-hover);
       border-color: rgba(37, 99, 235, 0.3);
     }
 
-    .btn-glow {
-      background: var(--accent-gradient) !important;
-      color: #fff !important;
-      border: none !important;
-      font-weight: 600;
-      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.25);
-      transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+    /* Pricing Grid */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
     }
 
-    .btn-glow:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
-    }
-
-    .btn-paypal {
-      background: var(--paypal-gradient) !important;
-      color: #fff !important;
-      border: none !important;
-      font-weight: 600;
-      box-shadow: 0 4px 14px rgba(0, 48, 135, 0.3);
-      transition: transform 0.2s ease, box-shadow 0.2s ease !important;
-    }
-
-    .btn-paypal:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0, 121, 193, 0.4);
-    }
-
-    .trust-metrics {
+    .pricing-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 24px;
+      padding: 2.5rem;
       display: flex;
-      gap: 1.5rem;
-      margin-top: 2rem;
-      padding-top: 1.75rem;
-      border-top: 1px solid rgba(226, 232, 240, 0.9);
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.3s ease;
+      position: relative;
+      box-shadow: var(--shadow-card);
     }
 
-    .metric-item strong {
-      display: block;
-      font-size: 1.15rem;
-      color: #0f172a;
+    .pricing-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--primary);
     }
 
-    .metric-item span {
-      font-size: 0.825rem;
-      color: #64748b;
+    .pricing-card.featured {
+      border: 2px solid var(--primary);
+      background: #ffffff;
+      box-shadow: 0 15px 35px rgba(37, 99, 235, 0.15);
     }
-  </style>
-</head>
-<body>
 
-<header>
-  <div class="container nav">
-    <div class="brand">
-      <img src="images/logo.png" alt="NovaSphere Logo" class="logo-img" />
-      <div class="brand-text">
-        <span class="brand-title">NovaSphere System</span>
-        <span class="brand-tagline">Web • Dashboards • Automation</span>
-      </div>
-    </div>
-    <nav class="links">
-      <a href="services.html">Services</a>
-      <a href="services.html#work">Work</a>
-      <a href="services.html#pricing">Pricing</a>
-      <a href="services.html#contact">Contact</a>
-    </nav>
-  </div>
-</header>
-
-<main>
-  <!-- Hero Section -->
-  <section class="container hero">
-    <div>
-      <div class="badge-glow">
-        <span>⚡ High-Performance Digital Solutions</span>
-      </div>
-      <h1 class="hero-title">
-        Build Faster. Scale Smarter. <br />
-        <span class="gradient-text">Convert More Clients.</span>
-      </h1>
-      <p class="lead">
-        We craft lightning-fast websites, custom analytics dashboards, and seamless Python automations engineered to turn site visitors into repeat revenue.
-      </p>
-      
-      <div class="stack spaced" style="max-width:580px">
-        <a class="btn btn-glow primary" href="services.html#contact">Book Free Strategy Call →</a>
-        <a class="btn ghost" href="services.html#pricing">Explore Fixed Pricing</a>
-      </div>
-
-      <div class="trust-metrics">
-        <div class="metric-item">
-          <strong>5–7 Days</strong>
-          <span>Rapid Turnaround</span>
-        </div>
-        <div class="metric-item">
-          <strong>Bilingual</strong>
-          <span>English &amp; Arabic Support</span>
-        </div>
-        <div class="metric-item">
-          <strong>100% Fixed</strong>
-          <span>No Hidden Costs</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="card card-modern">
-      <h3 style="margin-top:0">Ready to Get Started?</h3>
-      <p class="muted" style="margin-top:-8px; margin-bottom: 1rem; font-size: 0.9rem;">Submit a quick brief for a free timeline &amp; quote estimate.</p>
-      
-      <form id="briefForm" class="stack" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <input class="input" name="name" placeholder="Your Full Name" required />
-        <input class="input" name="email" type="email" placeholder="Work Email Address" required />
-        <input class="input" name="business" placeholder="Company / Website URL (optional)" />
-        <textarea class="input" name="needs" rows="3" placeholder="What are your core goals? (e.g., Redesign Website, Build Sales Dashboard, Python Scripting)" required></textarea>
-        
-        <input type="hidden" name="_subject" value="New Inquiry — NovaSphere Systems LLC" />
-        <input type="hidden" name="_format" value="json" />
-        
-        <button class="btn btn-glow primary" type="submit">Submit Brief &amp; Get Estimate</button>
-        <p id="briefStatus" class="muted" aria-live="polite"></p>
-      </form>
-    </div>
-  </section>
-
-  <!-- Value Proposition & Service Packages -->
-  <section class="container" style="padding-top: 4rem; padding-bottom: 4rem;">
-    <div style="text-align: center; max-width: 650px; margin: 0 auto 2.5rem auto;">
-      <span class="badge-glow">Featured Packages</span>
-      <h2>Turnkey Solutions Built for Growth</h2>
-      <p class="muted">Select a package to launch your web presence or secure direct payment via PayPal.</p>
-    </div>
-
-    <div class="grid cols-3 spaced">
-      <!-- Card 1 -->
-      <div class="card card-modern">
-        <div style="font-size: 1.75rem; margin-bottom: 0.5rem;">🚀</div>
-        <h3>Rapid Execution</h3>
-        <p class="muted">Go live in days, not months. We follow structured sprints to launch your project on time with zero fluff.</p>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="card card-modern">
-        <div style="font-size: 1.75rem; margin-bottom: 0.5rem;">🎯</div>
-        <h3>Conversion Focused</h3>
-        <p class="muted">Pretty isn't enough. We build layout pathways, analytics tracking, and forms designed to generate real business leads.</p>
-      </div>
-
-      <!-- Card 3: Direct PayPal Payment -->
-      <div class="card card-modern" style="border: 2px solid rgba(37, 99, 235, 0.3);">
-        <div style="font-size: 1.75rem; margin-bottom: 0.5rem;">💳</div>
-        <h3>Direct Project Retainer</h3>
-        <p class="muted">Secure payment for customized web design, dashboard projects, or Python automation services via PayPal.</p>
-        
-        <div style="margin-top: 1.25rem;">
-          <a class="btn btn-paypal" href="https://www.paypal.com/paypalme/Ruaasaad70" target="_blank" rel="noopener noreferrer" style="width: 100%;">
-            Pay via PayPal →
-          </a>
-        </div>
-      </div>
-    </div>
-    
-    <div class="center spaced" style="margin-top: 2.5rem;">
-      <a class="btn" href="services.html">View Our Full Suite of Services →</a>
-    </div>
-  </section>
-</main>
-
-<footer class="footer-gradient">
-  <div class="container footer-wrap">
-    <img src="images/logo.png" alt="NovaSphere Logo" class="footer-logo" />
-    <div class="footer-text">
-      © <span id="year"></span> <strong>NovaSphere Systems LLC</strong> • <a href="#" class="footer-link">Privacy Policy</a>
-    </div>
-  </div>
-</footer>
-
-<script>
-  // Mobile Menu Toggle
-  const menuBtn = document.getElementById('menuBtn');
-  const mobileMenu = document.getElementById('mobileMenu');
-  if (menuBtn && mobileMenu) {
-    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('open'));
-  }
-
-  // Dynamic Copyright Year
-  document.getElementById('year').textContent = new Date().getFullYear();
-
-  // Async Formspree Submission
-  async function sendWithFormspree(formEl, statusEl) {
-    statusEl.textContent = 'Submitting project brief...';
-    try {
-      const res = await fetch(formEl.action, { 
-        method: 'POST', 
-        body: new FormData(formEl), 
-        headers: { 'Accept': 'application/json' } 
-      });
-      if (res.ok) { 
-        formEl.reset(); 
-        statusEl.textContent = '🎉 Thank you! We have received your brief and will reply shortly.'; 
-      } else { 
-        const data = await res.json().catch(() => ({}));
-        statusEl.textContent = data.error || 'Submission error. Please try again.'; 
-      }
-    } catch (err) { 
-      statusEl.textContent = 'Network error. Please try again.'; 
-    }
-  }
-
-  const briefForm = document.getElementById('briefForm');
-  const briefStatus = document.getElementById('briefStatus');
-  if (briefForm) {
-    briefForm.addEventListener('submit', e => { 
-      e.preventDefault(); 
-      sendWithFormspree(briefForm, briefStatus); 
-    });
-  }
-</script>
-
-</body>
-</html>
+    .popular-tag {
+      position: absolute;
+      top: -14px;
+      right: 24px;
+      background: var(--bright-gradient);
+      color: #fff;
+      font-size: 0.75rem;
