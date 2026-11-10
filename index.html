@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   
-  <link rel="stylesheet" href="style.css?v=4" />
+  <link rel="stylesheet" href="style.css?v=6" />
 
   <!-- Embedded Modern Theme Extensions -->
   <style>
@@ -117,25 +117,6 @@
       border-color: rgba(37, 99, 235, 0.35);
     }
 
-    .card-featured {
-      border: 2px solid rgba(37, 99, 235, 0.4);
-      background: rgba(255, 255, 255, 0.92);
-    }
-
-    .popular-badge {
-      position: absolute;
-      top: -14px;
-      right: 24px;
-      background: var(--accent-gradient);
-      color: #fff;
-      font-size: 0.75rem;
-      font-weight: 700;
-      padding: 4px 14px;
-      border-radius: 20px;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
     .btn-glow {
       background: var(--accent-gradient) !important;
       color: #fff !important;
@@ -226,7 +207,7 @@
       
       <div class="stack spaced" style="max-width:580px">
         <a class="btn btn-glow primary" href="services.html#contact">Book Free Strategy Call →</a>
-        <a class="btn ghost" href="services.html#pricing">Explore Fixed Pricing</a>
+        <a class="btn ghost" href="services.html#pricing">Explore Pricing & Payments</a>
       </div>
 
       <div class="trust-metrics">
@@ -256,7 +237,7 @@
         <input class="input" name="business" placeholder="Company / Website URL (optional)" />
         <textarea class="input" name="needs" rows="3" placeholder="What are your core goals? (e.g., Redesign Website, Build Sales Dashboard, Python Scripting)" required></textarea>
         
-        <input type="hidden" name="_subject" value="New Inquiry — NovaSphere Systems LLC" />
+        <input type="hidden" name="_subject" value="New Inquiry — NovaSphere System LLC" />
         <input type="hidden" name="_format" value="json" />
         
         <button class="btn btn-glow primary" type="submit" style="width:100%;">Submit Brief &amp; Get Estimate</button>
@@ -265,26 +246,135 @@
     </div>
   </section>
 
- <!-- Custom Amount PayPal Card -->
-<div class="card card-modern" style="border: 2px solid rgba(37, 99, 235, 0.4);">
-  <div style="font-size: 2rem; margin-bottom: 0.75rem;">💳</div>
-  <h3>Custom Invoice / Retainer</h3>
-  <p class="muted" style="font-size: 0.875rem; margin-bottom: 1rem;">Enter the custom quote or invoice amount agreed upon for your project.</p>
+  <!-- Value Proposition & Flexible PayPal Payments -->
+  <section class="container" style="padding-top: 5rem; padding-bottomMy apologies for the mix-up! Let's switch right back to **NovaSphere System LLC**. 
 
-  <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-    <input type="hidden" name="cmd" value="_xclick" />
-    <input type="hidden" name="business" value="Ruaasaad70@yahoo.com" />
-    <input type="hidden" name="item_name" value="NovaSphere System — Custom Payment" />
-    <input type="hidden" name="currency_code" value="USD" />
+Here is your fully updated, modern code with **NovaSphere System LLC** locked in across the entire site, complete with the flexible custom-amount PayPal checkout (`Ruaasaad70@yahoo.com`):
 
-    <!-- Custom Dollar Input -->
-    <div style="margin-bottom: 1.25rem;">
-      <label style="display: block; font-size: 0.8rem; font-weight: 600; color: #64748b; margin-bottom: 4px;">Enter Amount ($ USD)</label>
-      <input type="number" name="amount" min="1" step="any" placeholder="e.g. 500" required class="input" style="width: 100%; font-size: 1.1rem; font-weight: 700;" />
-    </div>
-    
-    <button type="submit" class="btn btn-paypal" style="width: 100%; cursor: pointer;">
-      Pay Custom Amount via PayPal →
-    </button>
-  </form>
-</div>
+```html
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NovaSphere System — Web • Dashboards • Automation</title>
+  <meta name="description" content="Fast, conversion-focused websites, analytics dashboards, and custom Python automation for growing businesses." />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/logo.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="[https://fonts.googleapis.com](https://fonts.googleapis.com)" />
+  <link rel="preconnect" href="[https://fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin />
+  <link href="[https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap](https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap)" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="style.css?v=6" />
+
+  <!-- Embedded Modern Theme Extensions -->
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --navy-deep: #0f172a;
+      --accent-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #2563eb 100%);
+      --paypal-gradient: linear-gradient(135deg, #003087 0%, #0079c1 100%);
+      --bg-glass: rgba(255, 255, 255, 0.75);
+      --card-border: rgba(226, 232, 240, 0.8);
+      --card-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.07);
+      --card-hover-shadow: 0 25px 50px -12px rgba(37, 99, 235, 0.22);
+    }
+
+    body { 
+      font-family: 'Inter', sans-serif;
+      color: #0f172a;
+      background: 
+        radial-gradient(1200px 600px at 80% -10%, rgba(37, 99, 235, 0.08) 0%, transparent 60%),
+        radial-gradient(800px 500px at -10% 40%, rgba(99, 102, 241, 0.05) 0%, transparent 50%),
+        #f8fafc;
+    }
+
+    h1, h2, h3, .brand-title { 
+      font-family: 'Plus Jakarta Sans', sans-serif; 
+      letter-spacing: -0.025em;
+    }
+
+    /* Modern Brand Header */
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-title {
+      font-weight: 800;
+      font-size: 1.25rem;
+      line-height: 1.1;
+      color: var(--navy-deep);
+    }
+
+    .brand-tagline {
+      font-weight: 600;
+      font-size: 0.725rem;
+      color: #64748b;
+      margin-top: 3px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .hero-title {
+      font-size: clamp(2.5rem, 5vw, 3.4rem);
+      font-weight: 800;
+      line-height: 1.12;
+    }
+
+    .gradient-text {
+      background: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .badge-glow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 50px;
+      background: rgba(37, 99, 235, 0.07);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.85rem;
+      border: 1px solid rgba(37, 99, 235, 0.2);
+      box-shadow: 0 2px 10px rgba(37, 99, 235, 0.05);
+      margin-bottom: 1.25rem;
+    }
+
+    .card-modern {
+      background: var(--bg-glass);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      padding: 2.25rem;
+      box-shadow: var(--card-shadow);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+    }
+
+    .card-modern:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--card-hover-shadow);
+      border-color: rgba(37, 99, 235, 0.35);
+    }
+
+    .btn-glow {
+      background: var(--accent-gradient) !important;
+      color: #fff !important;
+      border: none !important;
+      font-weight: 600;
+      border-radius: 12px;
+      padding:
