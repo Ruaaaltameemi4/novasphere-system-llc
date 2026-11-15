@@ -201,7 +201,7 @@
     /* Pricing Grid */
     .pricing-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 2rem;
     }
 
@@ -286,19 +286,44 @@
       color: #fff;
       border: none;
       font-weight: 700;
-      border-radius: 14px;
-      padding: 14px 20px;
-      font-size: 0.95rem;
+      border-radius: 12px;
+      padding: 12px 18px;
+      font-size: 0.9rem;
       cursor: pointer;
-      box-shadow: 0 8px 20px rgba(0, 48, 135, 0.2);
+      box-shadow: 0 6px 16px rgba(0, 48, 135, 0.2);
       transition: all 0.25s ease;
       width: 100%;
       text-align: center;
+      display: block;
+      text-decoration: none;
+      margin-top: 0.75rem;
     }
 
     .btn-paypal:hover {
       transform: translateY(-2px);
-      box-shadow: 0 12px 28px rgba(0, 121, 193, 0.35);
+      box-shadow: 0 10px 24px rgba(0, 121, 193, 0.35);
+    }
+
+    .btn-paypal-outline {
+      background: #ffffff;
+      color: #003087;
+      border: 2px solid #003087;
+      font-weight: 700;
+      border-radius: 12px;
+      padding: 12px 18px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      width: 100%;
+      text-align: center;
+      display: block;
+      text-decoration: none;
+      margin-top: 0.75rem;
+    }
+
+    .btn-paypal-outline:hover {
+      background: rgba(0, 48, 135, 0.05);
+      transform: translateY(-2px);
     }
 
     /* Section Titles */
@@ -312,7 +337,7 @@
       font-size: 2.5rem;
       font-weight: 800;
       margin-top: 0.5rem;
-      margin-bottom: 1rem;
+      margin-bottom: 1.0rem;
       color: var(--text-main);
     }
 
@@ -461,205 +486,4 @@
     </p>
     <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
       <a class="btn-bright" href="#about">Meet the Designer ↓</a>
-      <a class="btn-bright" style="background: #ffffff; color: var(--primary); border: 1px solid var(--border-card);" href="#pricing">Explore Packages ($400+)</a>
-    </div>
-
-    <div class="trust-badge-row">
-      <span class="trust-pill">⚡ Fast 5–7 Day Delivery</span>
-      <span class="trust-pill">🎓 CSUS Sacramento Engineering Grad</span>
-      <span class="trust-pill">🔒 Secure PayPal Checkout</span>
-    </div>
-  </section>
-
-  <!-- 2. Personal Story & Biography Section -->
-  <section id="about">
-    <div class="card-bright" style="max-width: 850px; margin: 0 auto; text-align: center;">
-      <span style="color: var(--primary); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.85rem;">About the Designer</span>
-      <h2 style="font-size: 2.25rem; margin-top: 0.5rem; margin-bottom: 1.5rem; color: var(--text-main);">Hi, I'm Ruaa Altameemi</h2>
-      
-      <p style="color: var(--text-muted); line-height: 1.8; font-size: 1.05rem; margin-bottom: 1.5rem;">
-        I graduated with a degree in <strong>Computer Engineering from California State University, Sacramento in 2022</strong>. My technical background gives me a solid engineering foundation, which I combine with a passion for creative design, modern layouts, and intuitive user experiences.
-      </p>
-      
-      <p style="color: var(--text-muted); line-height: 1.8; font-size: 1.05rem; margin-bottom: 2rem;">
-        I founded <strong>NovaSphere System LLC</strong> as a small business dedicated to helping entrepreneurs build and elevate their digital presence. Together, we can elevate your brand—I am here to turn your dream into a digital reality so we can succeed together.
-      </p>
-
-      <a class="btn-bright" href="#pricing">View Pricing Tiers →</a>
-    </div>
-  </section>
-
-  <!-- 3. Portfolio Showcase Section -->
-  <section id="work">
-    <div class="section-header">
-      <span style="color: var(--primary); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.85rem;">Work Showcase</span>
-      <h2>Custom Web Solutions</h2>
-      <p style="color: var(--text-muted);">Explore the types of web projects created to help clients grow their digital footprint.</p>
-    </div>
-
-    <div class="portfolio-stack">
-      <!-- Project Type 1 -->
-      <div class="portfolio-row">
-        <div class="portfolio-info">
-          <span style="color: var(--primary); font-size: 0.85rem; font-weight: 700;">Single Page Sites</span>
-          <h3>Landing Pages &amp; Launchsites</h3>
-          <p style="color: var(--text-muted); line-height: 1.6;">High-impact 1-page websites designed to quickly present your business, showcase key photos, and capture customer inquiries.</p>
-        </div>
-        <div class="portfolio-preview">🚀</div>
-      </div>
-
-      <!-- Project Type 2 -->
-      <div class="portfolio-row">
-        <div class="portfolio-info">
-          <span style="color: #06b6d4; font-size: 0.85rem; font-weight: 700;">Multi-Page Business</span>
-          <h3>Full Corporate &amp; Business Websites</h3>
-          <p style="color: var(--text-muted); line-height: 1.6;">Complete multi-page platforms featuring dedicated Home, About, Services, Photo Gallery, and Contact pages.</p>
-        </div>
-        <div class="portfolio-preview">🏢</div>
-      </div>
-
-      <!-- Project Type 3 -->
-      <div class="portfolio-row">
-        <div class="portfolio-info">
-          <span style="color: #8b5cf6; font-size: 0.85rem; font-weight: 700;">Custom Features</span>
-          <h3>Feature-Rich Web Platforms</h3>
-          <p style="color: var(--text-muted); line-height: 1.6;">Advanced websites built with expanded photo galleries, custom contact forms, analytics integration, and custom features.</p>
-        </div>
-        <div class="portfolio-preview">✨</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 4. Pricing Tiers -->
-  <section id="pricing">
-    <div class="section-header">
-      <span style="color: var(--primary); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.85rem;">Transparent Pricing</span>
-      <h2>Web Design Packages &amp; Pay</h2>
-      <p style="color: var(--text-muted);">Pricing is structured according to page count, custom features, and media integration.</p>
-    </div>
-
-    <div class="pricing-grid">
-      <!-- Tier 1 ($400) -->
-      <div class="pricing-card">
-        <div>
-          <h3>Starter Package</h3>
-          <p style="font-size: 2.25rem; font-weight: 800; color: var(--text-main); margin: 0.75rem 0;">$400 <span style="font-size: 0.85rem; font-weight: 500; color: var(--text-muted);">USD</span></p>
-          <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5;">Ideal for new businesses looking for a fast, clean single-page site.</p>
-
-          <ul class="feature-list">
-            <li>✔ <strong>1-Page</strong> Custom Layout</li>
-            <li>✔ Up to <strong>5 High-Res Pictures</strong></li>
-            <li>✔ Standard Contact Form</li>
-            <li>✔ Mobile Responsive Design</li>
-          </ul>
-        </div>
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-          <input type="hidden" name="cmd" value="_xclick" />
-          <input type="hidden" name="business" value="ruaasaad70@yahoo.com" />
-          <input type="hidden" name="item_name" value="NovaSphere System — Starter Package ($400)" />
-          <input type="hidden" name="amount" value="400.00" />
-          <input type="hidden" name="currency_code" value="USD" />
-          <button type="submit" class="btn-paypal">Pay $400 via PayPal →</button>
-        </form>
-      </div>
-
-      <!-- Tier 2 ($800) - Featured -->
-      <div class="pricing-card featured">
-        <span class="popular-tag">Most Popular</span>
-        <div>
-          <h3>Standard Package</h3>
-          <p style="font-size: 2.25rem; font-weight: 800; color: var(--text-main); margin: 0.75rem 0;">$800 <span style="font-size: 0.85rem; font-weight: 500; color: var(--text-muted);">USD</span></p>
-          <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5;">A complete multi-page site equipped with gallery and custom section layouts.</p>
-
-          <ul class="feature-list">
-            <li>✔ Up to <strong>5 Custom Pages</strong></li>
-            <li>✔ Up to <strong>15 High-Res Pictures</strong></li>
-            <li>✔ Dedicated Photo Gallery</li>
-            <li>✔ SEO Basics &amp; Custom Features</li>
-          </ul>
-        </div>
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-          <input type="hidden" name="cmd" value="_xclick" />
-          <input type="hidden" name="business" value="ruaaaltameemi4@gmail.com" />
-          <input type="hidden" name="item_name" value="NovaSphere System — Standard Package ($800)" />
-          <input type="hidden" name="amount" value="800.00" />
-          <input type="hidden" name="currency_code" value="USD" />
-          <button type="submit" class="btn-paypal">Pay $800 via PayPal →</button>
-        </form>
-      </div>
-
-      <!-- Tier 3 ($1,200) -->
-      <div class="pricing-card">
-        <div>
-          <h3>Premium Package</h3>
-          <p style="font-size: 2.25rem; font-weight: 800; color: var(--text-main); margin: 0.75rem 0;">$1,200 <span style="font-size: 0.85rem; font-weight: 500; color: var(--text-muted);">USD</span></p>
-          <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5;">Full-scale digital platform with extensive features and media support.</p>
-
-          <ul class="feature-list">
-            <li>✔ Up to <strong>8+ Custom Pages</strong></li>
-            <li>✔ <strong>Unlimited Pictures</strong> &amp; Media</li>
-            <li>✔ Advanced Custom Features</li>
-            <li>✔ Priority Ongoing Support</li>
-          </ul>
-        </div>
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-          <input type="hidden" name="cmd" value="_xclick" />
-          <input type="hidden" name="business" value="ruaaaltameemi4@gmail.com" />
-          <input type="hidden" name="item_name" value="NovaSphere System — Premium Package ($1,200)" />
-          <input type="hidden" name="amount" value="1200.00" />
-          <input type="hidden" name="currency_code" value="USD" />
-          <button type="submit" class="btn-paypal">Pay $1,200 via PayPal →</button>
-        </form>
-      </div>
-    </div>
-
-    <!-- Custom Retainer Payment -->
-    <div style="margin-top: 2.5rem; text-align: center;">
-      <div class="card-bright" style="max-width: 600px; margin: 0 auto;">
-        <h4 style="margin-top:0; font-size: 1.25rem;">Paying a Custom Quoted Amount?</h4>
-        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.25rem;">Enter any custom invoice or deposit agreed upon for your project directly on PayPal.</p>
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-          <input type="hidden" name="cmd" value="_xclick" />
-          <input type="hidden" name="business" value="ruaaaltameemi4@gmail.com" />
-          <input type="hidden" name="item_name" value="NovaSphere System — Custom Project Payment" />
-          <input type="hidden" name="currency_code" value="USD" />
-          <button type="submit" class="btn-bright" style="width: 100%;">Pay Custom Invoice via PayPal →</button>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- 5. Contact Section -->
-  <section id="contact">
-    <div class="card-bright" style="max-width: 750px; margin: 0 auto; text-align: center;">
-      <h2>Let's Build Your Website Together</h2>
-      <p style="color: var(--text-muted); margin-bottom: 2rem;">Ready to take your business to the next level with a custom website? Get in touch today!</p>
-      
-      <div class="contact-grid">
-        <div class="contact-item">
-          <strong>📞 Phone Number</strong>
-          <a href="tel:9165861411">(916) 586-1411</a>
-        </div>
-        <div class="contact-item">
-          <strong>✉️ Email Address</strong>
-          <a href="mailto:ruaaaltameemi4@gmail.com">ruaaaltameemi4@gmail.com</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<footer>
-  <div class="container">
-    © <span id="year"></span> <strong>NovaSphere System LLC</strong>. All rights reserved.
-  </div>
-</footer>
-
-<script>
-  // Dynamic Copyright Year
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-
-</body>
-</html>
+      <a class="btn-bright" style="background: #ffffff; color: var(--primary); border: 1
